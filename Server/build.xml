@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project default="final-clean" name="BuildAll">
+	<!-- <property name="lib.dir" value="D:\3rdParty\jars" />
+	<property name="framework.lib.dir" value="D:\FrameworkBuilds\ReleaseBranch\Candidate" /> -->
+	<property name="catfishapi.lib.dir" value="" />
+	<property name="java8.compiler" value="C:\Program Files\Java\jdk1.8.0_40\bin\javac" />
+	<property name="catfishBase.class.dir" value="" />
+	<property name="frameworkBase.class.dir" value="" />
+
+	<property name="lib.dir" value="\\cfserver01\Share\Projects\jars" />
+	<property name="framework.lib.dir" value="\\cfserver01\Share\Projects\jars\catfishframework" /> 
+
+	<property name="thirdpartybusinessmodel.dir" value="ThirdPartyBusinessModel"/>
+	<property name="fraudengine.dir" value="FraudEngine"/>
+    <property name="ruleengine.dir" value="RuleEngine-Common"/>
+	<property name="informationacquisition.dir" value="InformationAcquisition"/>
+	<property name="catfishPlugins.dir" value="CatfishPlugins"/>
+	<property name="manualJobArranger.dir" value="ManualJobArranger"/>
+	<property name="batchjobstrigger.dir" value="BatchJobsTrigger"/>
+	<property name="flowController.dir" value="FlowController"/>
+	<property name="flowMonitor.dir" value="FlowMonitor"/>
+	<property name="fundController.dir" value="FundController"/>
+	<property name="jobscheduler.dir" value="JobScheduler"/>
+	<property name="jobschedulerV2.dir" value="JobSchedulerV2"/>
+	<property name="jobschedulerepeater.dir" value="JobScheduleRepeater"/>
+	<property name="messagenotification.dir" value="MessageNotification"/>
+	<property name="messagelauncher.dir" value="MessageLauncher"/>
+	<!-- <property name="networkRelationshipPlugin.dir" value="NetworkRelationshipPlugin"/> -->
+	<property name="riskPlugins.dir" value="RiskPlugins"/>
+
+
+	<property name="temp.dir" value="temp"/>
+	<property name="temp.catfish.dir" value="temp/catfish"/>
+	<property name="temp.thirdpartybusinessmodel.dir" value="temp/thirdpartybusinessmodel"/>
+	<property name="temp.fraudengine.dir" value="temp/fraudengine"/>
+	<property name="temp.ruleengine.dir" value="temp/ruleengine"/>
+	<property name="temp.informationacquisition.dir" value="temp/informationacquisition"/>
+
+	<property name="temp.jobscheduler.dir" value="temp/jobscheduler"/>
+	<property name="temp.jobschedulerV2.dir" value="temp/jobschedulerV2"/>
+	<property name="temp.jobschedulerepeater.dir" value="temp/jobschedulerepeater"/>
+	<property name="temp.messagenotification.dir" value="temp/messagenotification"/>
+	<property name="temp.messagelauncher.dir" value="temp/messagelauncher"/>
+	<property name="temp.catfishPlugins.dir" value="temp/catfishPlugins"/>
+	<property name="temp.manualJobArranger.dir" value="temp/manualJobArranger"/>
+	<property name="temp.batchjobstrigger.dir" value="temp/batchjobstrigger"/>
+	<property name="temp.flowController.dir" value="temp/flowController"/>
+	<property name="temp.flowMonitor.dir" value="temp/flowMonitor"/>
+	<property name="temp.fundController.dir" value="temp/fundController"/>
+	<!-- <property name="temp.networkRelationshipPlugin.dir" value="temp/networkRelationshipPlugin"/> -->
+	<property name="temp.riskPlugins.dir" value="temp/riskPlugins"/>
+
+    <property name="output.dir" value="out"/>
+
+
+    <!--CatfishBase 依赖包-->
+	<fileset dir="${lib.dir}" id="catfish.ref">
+	    <include name="log4j/log4j-1.2.17.jar"/>
+		<include name="log4j/log4j-1.2.17.jar"/>
+		<include name="google/gson-2.2.4.jar"/>
+		<include name="aliyun/aliyun-sdk-mns-1.0.3.jar"/>
+		<include name="spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+		<include name="spring/spring-tx-4.0.5.RELEASE.jar"/>
+		<include name="spring/spring-core-4.0.5.RELEASE.jar"/>
+		<include name="joda/joda-time-2.5.jar"/>
+		<include name="jdbc/bonecp-0.7.1.RELEASE.jar"/>
+		<include name="mongo/mongo-java-driver-3.4.1.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/commons-logging-1.2.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/commons-codec-1.9.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/httpasyncclient-4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpasyncclient-cache-4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpclient-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpclient-cache-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpcore-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpmime-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpcore-nio-4.4.1.jar"/>
+		<include name="aliyun/ons/ons-api-1.1.4.jar"/>
+		<include name="aliyun/ons/ons-client-1.1.4.jar"/>
+		<include name="aliyun/ons/fastjson-1.1.41.jar"/>
+		<include name="aliyun/ons/netty-all-4.0.21.Final.jar"/>
+		<include name="aliyun/ons/rocketmq-client-3.2.1.jar"/>
+		<include name="aliyun/ons/rocketmq-common-3.2.1.jar"/>
+		<include name="aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+		<include name="axis/axiom-api-1.2.13.jar"/>
+		<include name="pinyin4j-2.5.0.jar"/>
+	</fileset>
+	<fileset dir="${framework.lib.dir}" id="catfishframework.ref">
+		<include name="FrameworkBase/FrameworkBase.jar"/>
+		<include name="CatfishBase/CatfishBase.jar"/>
+		<include name="GrasscarpServices/GrasscarpServices-models.jar"/>
+	</fileset>
+	<fileset dir="${catfishapi.lib.dir}" id="catfishapi.ref">
+		<include name="CowfishService-model.jar"/>
+		<include name="GrasscarpServices-models.jar"/>
+		<include name="fpp-api/fpp-api-1.0.jar"/>
+		<include name="installment-settlement-api-1.0.3.jar"/>
+	</fileset>
+
+    <fileset dir="${output.dir}" id="thirdpartybusinessmodel.file">
+		<include name="ThirdPartyBusinessModel.jar" />
+    </fileset>
+
+	<target name="preClean">
+		<delete dir="${temp.dir}" />
+		<delete dir="${output.dir}" />
+		<delete dir="${thirdpartybusinessmodel.dir}/bin" />
+		<delete dir="${fraudengine.dir}/bin" />
+		<delete dir="${ruleengine.dir}/bin" />
+		<delete dir="${informationacquisition.dir}/bin" />
+		<delete dir="${jobscheduler.dir}/bin" />
+		<delete dir="${jobschedulerV2.dir}/bin" />
+		<delete dir="${jobschedulerepeater.dir}/bin" />
+		<delete dir="${messagenotification.dir}/bin" />
+		<delete dir="${messagelauncher.dir}/bin" />
+		<delete dir="${catfishPlugins.dir}/bin" />
+		<delete dir="${manualJobArranger.dir}/bin" />
+		<delete dir="${batchjobstrigger.dir}/bin" />
+		<delete dir="${flowController.dir}/bin" />
+		<delete dir="${flowMonitor.dir}/bin" />
+		<delete dir="${fundController.dir}/bin" />
+		<!-- <delete dir="${networkRelationshipPlugin.dir}/bin" /> -->
+		<delete dir="${riskPlugins.dir}/bin" />
+    	<echo level="info">预清理完毕......</echo>
+	</target>
+
+    <target name="init" depends="preClean">
+        <mkdir dir="${temp.catfish.dir}"/>
+        <mkdir dir="${temp.thirdpartybusinessmodel.dir}"/>
+		<mkdir dir="${temp.fraudengine.dir}"/>
+		<mkdir dir="${temp.ruleengine.dir}"/>
+		<mkdir dir="${temp.informationacquisition.dir}"/>
+		<mkdir dir="${temp.catfishPlugins.dir}"/>
+		<mkdir dir="${temp.manualJobArranger.dir}"/>
+		<mkdir dir="${temp.batchjobstrigger.dir}"/>
+		<mkdir dir="${temp.flowController.dir}"/>
+		<mkdir dir="${temp.flowMonitor.dir}"/>
+    	<mkdir dir="${temp.fundController.dir}"/>
+		<mkdir dir="${temp.riskPlugins.dir}"/>
+        <mkdir dir="${output.dir}"/>
+		<mkdir dir="${thirdpartybusinessmodel.dir}/bin" />
+		<mkdir dir="${fraudengine.dir}/bin" />
+		<mkdir dir="${ruleengine.dir}/bin" />
+		<mkdir dir="${informationacquisition.dir}/bin" />
+		<mkdir dir="${jobscheduler.dir}/bin" />
+		<mkdir dir="${jobschedulerV2.dir}/bin" />
+		<mkdir dir="${jobschedulerepeater.dir}/bin" />
+		<mkdir dir="${messagenotification.dir}/bin" />
+		<mkdir dir="${messagelauncher.dir}/bin" />
+		<mkdir dir="${catfishPlugins.dir}/bin" />
+		<mkdir dir="${manualJobArranger.dir}/bin" />
+		<mkdir dir="${batchjobstrigger.dir}/bin" />
+		<mkdir dir="${flowController.dir}/bin" />
+		<mkdir dir="${flowMonitor.dir}/bin" />
+    	<mkdir dir="${fundController.dir}/bin" />
+    	<!-- <mkdir dir="${networkRelationshipPlugin.dir}/bin" /> -->
+		<mkdir dir="${riskPlugins.dir}/bin" />
+    	<echo level="info">初始化完毕......</echo>
+    </target>
+
+	<target name="copy-catfishbase" depends="init">
+	    <copy todir="${temp.catfish.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+	    	<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到CatfishBase完毕......</echo>
+		<copy todir="${temp.thirdpartybusinessmodel.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到ThirdPartyBusinessModel完毕......</echo>
+		<copy todir="${temp.fraudengine.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到FraudEngine完毕......</echo>
+		<copy todir="${temp.ruleengine.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到RuleEngine完毕......</echo>
+
+		<copy todir="${temp.informationacquisition.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+			<fileset refid="catfishapi.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到InformationAcquisition完毕......</echo>
+
+		<copy todir="${temp.jobscheduler.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到JobScheduler完毕......</echo>
+
+		<copy todir="${temp.jobschedulerV2.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到JobSchedulerV2完毕......</echo>
+
+		<copy todir="${temp.jobschedulerepeater.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到JobSchedulerRepeater完毕......</echo>
+
+		<copy todir="${temp.messagelauncher.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到MessageLauncher完毕......</echo>
+
+		<copy todir="${temp.messagenotification.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到MessageNotification完毕......</echo>
+
+		<copy todir="${temp.catfishPlugins.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+			<fileset refid="catfishapi.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到catfishPlugins完毕......</echo>
+
+<!-- 		<copy todir="${temp.networkRelationshipPlugin.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到NetworkRelationshipPlugin完毕......</echo> -->
+
+<!-- 		<copy todir="${temp.networkRelationshipPlugin.dir}" flatten="true">
+           <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+        </copy>
+		<echo level="info">拷贝CatfishBase依赖包到thirdpartybusinessmodel完毕......</echo> -->
+
+		<copy todir="${temp.riskPlugins.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+			<fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝CatfishBase依赖包到riskPlugins完毕......</echo>
+	</target>
+
+	<!--打包ThirdPartyBusinessModel并拷贝到需要它的项目 -->
+	<target name="jar-thirdpartybusinessmodel" depends="copy-catfishbase" description="jar taget">
+		<ant antfile="${thirdpartybusinessmodel.dir}/build-thirdpartybusinessmodel.xml" target="jar"></ant>
+		<echo>打包ThirdPartyBusinessModel.jar完毕......</echo>
+
+		<copy todir="${temp.informationacquisition.dir}" flatten="true">
+		    <fileset refid="thirdpartybusinessmodel.file"></fileset>
+		</copy>
+		<echo>将ThirdPartyBusinessModel.jar拷贝到InformationAcquisition完毕......</echo>
+
+		<copy todir="${temp.ruleengine.dir}" flatten="true">
+		    <fileset refid="thirdpartybusinessmodel.file"></fileset>
+		</copy>
+		<echo>将ThirdPartyBusinessModel.jar拷贝到RuleEngine完毕......</echo>
+    </target>
+
+	<!--打包其他项目jar-->
+	<target name="jar" depends="jar-thirdpartybusinessmodel" description="jar taget">
+		<ant antfile="build/${catfishPlugins.dir}.xml"></ant>
+		<echo>打包catfishPlugins完毕......</echo>
+		<ant antfile="build/${manualJobArranger.dir}.xml"></ant>
+		<echo>打包ManualJobArranger完毕......</echo>
+		<ant antfile="build/${batchjobstrigger.dir}.xml"></ant>
+		<echo>打包batchjobstrigger完毕......</echo>
+		<ant antfile="build/${flowController.dir}.xml"></ant>
+		<echo>打包FlowController完毕......</echo>
+		<ant antfile="build/${flowMonitor.dir}.xml"></ant>
+		<echo>打包FlowMonitor完毕......</echo>
+		<ant antfile="build/${fundController.dir}.xml"></ant>
+		<echo>打包FundController完毕......</echo>
+		<ant antfile="${informationacquisition.dir}/build-informationacquisition.xml" target="jar"></ant>
+		<echo>打包informationacquisition.jar完毕......</echo>
+		<ant antfile="${fraudengine.dir}/build-fraudengine.xml" target="jar"></ant>
+		<echo>打包FraudEngine.jar完毕......</echo>
+		<ant antfile="${ruleengine.dir}/build-ruleengine.xml" target="outputrulesconfig"></ant>
+		<echo>打包RuleEngine.jar完毕......</echo>
+
+		<ant antfile="${ruleengine.dir}/build_CL/buildForCL.xml" target="jar"></ant>
+		<echo>打包RuleEngine Cash Loan Model完毕......</echo>
+
+		<ant antfile="${jobscheduler.dir}/build-jobscheduler.xml" target="jar"></ant>
+		<echo>打包JobSch.jar完毕......</echo>
+
+		<ant antfile="${jobschedulerV2.dir}/build-jobschedulerV2.xml" target="jar"></ant>
+		<echo>打包JobSchedulerV2.jar完毕......</echo>
+
+		<ant antfile="${jobschedulerepeater.dir}/build-jobschedulerepeater.xml" target="jar"></ant>
+		<echo>打包JobSchedulerV2.jar完毕......</echo>
+
+		<ant antfile="${messagelauncher.dir}/build-messagelauncher.xml" target="jar"></ant>
+		<echo>打包MessageLauncher.jar完毕......</echo>
+
+		<ant antfile="${messagenotification.dir}/build-messagenotification.xml" target="jar"></ant>
+		<echo>打包MessageNotification.jar完毕......</echo>
+
+<!-- 		<ant antfile="${networkRelationshipPlugin.dir}/build-networkrelationshipplugin.xml" target="jar"></ant>
+		<echo>relationX.jar完毕......</echo> -->
+
+		<ant antfile="build/${riskPlugins.dir}.xml"></ant>
+		<echo>打包riskPlugins完毕......</echo>
+    </target>
+	<target name="final-clean" depends="jar">
+		<delete dir="${temp.dir}" />
+        <echo level="info">最后清理完毕......</echo>
+	</target>
+</project>

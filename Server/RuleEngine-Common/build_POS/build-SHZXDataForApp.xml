@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="SHZXDataModel">    
+    <property name="jarname" value="SHZXDataForApp-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in-app.dir}/SHZXDataInForm.class"/>
+   
+        	<zipfileset excludes="META-INF/*.SF" src="${temp.dir}/lib/joda-time-2.5.jar" /> 
+        	
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

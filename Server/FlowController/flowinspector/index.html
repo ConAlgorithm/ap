@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+
+        <title>Flow Inspector</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet"> -->
+        <!-- <link rel="stylesheet" href="../../css/jsplumb.css"> -->
+        <link rel="stylesheet" href="default.css">
+		<script src="external/jquery-1.9.0-min.js"></script>
+        <script src="external/jquery-ui-1.9.2.min.js"></script>
+        <script src="external/jquery.ui.touch-punch-0.2.2.min.js"></script>
+        <script src="external/jquery.jsPlumb-1.7.5-min.js"></script>
+    </head>
+    <body data-demo-id="flowchart" data-library="jquery">
+        <div id="main">
+            <div class="demo flowchart-demo" id="flowchart-demo">
+            </div>
+        </div>
+        <div style="position:fixed;top:20px;left:10px;">
+            <button id="refresh">Refresh</button>
+        </div>
+        <div id="activityTooltip" style="position:fixed;top:20px;right:10px;display: none;">
+            <div>
+	            <div class="tooltip-title">Name:</div>
+	            <div id="activityName" class="tooltip-content"></div>
+            </div>
+            <div id="startTimeContainer">
+	            <div class="tooltip-title">Start Time:</div>
+	            <div  id="startTime" class="tooltip-content"></div>
+            </div>
+            <div id="endTimeContainer">
+                <div class="tooltip-title">End Time:</div>
+                <div  id="endTime" class="tooltip-content"></div>
+            </div>
+            <div id="prerequisiteJobsContainer">
+                <div class="tooltip-title">Prerequisite Jobs:</div>
+                <div id="prerequisiteJobs" class="tooltip-content"></div>
+            </div>
+            <div id="prerequisiteActivitiesContainer">
+                <div class="tooltip-title">Prerequisite Activities:</div>
+                <div id="prerequisiteActivities"  class="tooltip-content"></div>
+            </div>
+        </div>
+
+        <script src="workflow.js"></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>

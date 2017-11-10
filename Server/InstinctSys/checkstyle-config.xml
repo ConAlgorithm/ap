@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<checkstyle-configurations file-format-version="5.0.0" default-check-configuration="Custom of Sun Checks (Eclipse)">
+  <check-configuration name="Custom" location="D:\eclipse\checkstyle.xml" type="external" description="">
+    <additional-data name="protect-config-file" value="false"/>
+  </check-configuration>
+  <check-configuration name="Custom of Sun Checks (Eclipse)" location="internal_config__1466569662837.xml" type="internal" description="Slightly modified version of Sun Checks that better matches the default code formatter setting of Eclipse."/>
+  <check-configuration name="Custom of Google Checks" location="internal_config_1466574042373.xml" type="internal" description="Checkstyle configurartion that checks the Google coding conventions (https://google-styleguide.googlecode.com/svn-history/r130/trunk/javaguide.html)."/>
+</checkstyle-configurations>

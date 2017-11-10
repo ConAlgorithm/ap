@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar" sourcepath="C:/Users/Alex/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/share/Projects/jars/apache/commons-codec-1.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JDK7"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

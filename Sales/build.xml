@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project default="final-clean" name="BuildAll"> 
+    <property name="lib.dir" value="D:\3rdParty\jars" />
+	<property name="framework.lib.dir" value="D:\FrameworkBuilds\ReleaseBranch\Candidate" />
+
+	<!--<property name="lib.dir" value="\\cfserver01\Share\Projects\jars" />
+	<property name="framework.lib.dir" value="\\cfserver01\Share\Projects\jars\catfishframework" />-->
+
+	<property name="catfishsales.name" value="CatfishSales"/>
+    <property name="datasynchronizer.name" value="SalesDataSynchronizer"/> 	
+	
+	<property name="temp.dir" value="temp"/> 
+	<property name="temp.catfishsales.dir" value="temp/CatfishSales"/> 
+	<property name="temp.datasynchronizer.dir" value="temp/SalesDataSynchronizer"/> 
+	
+    <property name="output.dir" value="out"/>
+	
+	<target name="preClean">  
+		<delete dir="${temp.dir}" />
+		<delete dir="${output.dir}" />
+    	<echo level="info">预清理完毕......</echo> 
+	</target>
+	
+    <target name="init" depends="preClean">  
+    	<mkdir dir="${output.dir}" />
+        <mkdir dir="${temp.catfishsales.dir}"/>
+        <mkdir dir="${temp.datasynchronizer.dir}"/>
+    	<echo level="info">初始化完毕......</echo>
+    </target>
+
+	<!--打包其他项目jar-->
+	<target name="jar-catfishsales" depends="init" description="jar taget">
+		<!--<ant antfile="build/${catfishsales.name}.xml"></ant>
+		<echo>打包${catfishsales.name}完毕......</echo> -->
+    </target>
+	<target name="jar-datasynchronizer" depends="jar-catfishsales">
+	   <!--<ant antfile="build/${datasynchronizer.name}.xml"></ant>
+	   <echo>打包${datasynchronizer.name}完毕......</echo> -->
+	</target>
+	<target name="final-clean" depends="jar-datasynchronizer,jar-catfishsales">
+
+		<delete dir="${temp.dir}" />
+        <echo level="info">最后清理完毕......</echo>
+	</target>
+</project>  

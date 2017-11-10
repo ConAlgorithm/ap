@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="MessageLauncher"> 
+    
+    <property name="jarname" value="MessageLauncher.jar"/>
+    <property name="project.name" value="MessageLauncher"/>
+    <property name="src.dir" value="${messagelauncher.dir}/src"/>  
+    <property name="classes.dir" value="${messagelauncher.dir}/bin"/>  
+  		
+	<!--第三方jar-->  
+    <path id="lib-classpath">  
+        <fileset dir="${temp.messagelauncher.dir}">              
+            <include name="*.jar"/>			
+        </fileset>  
+    </path>
+	
+	<target name="copy">
+	    <copy todir="${temp.messagelauncher.dir}" flatten="true">
+	    	<fileset dir="${framework.lib.dir}">
+	    		<include name="CatfishServer.jar"/>
+	    		<include name="CatfishServices/CatfishServices.jar"/>
+	    	</fileset>
+		   <fileset dir="${lib.dir}">
+				<include name="log4j/log4j-1.2.17.jar"/>
+				<include name="google/gson-2.2.4.jar"/>
+				<include name="jackson/jackson-all-1.9.0.jar"/>
+				<include name="dom4j/dom4j-1.6.1.jar"/>
+				<include name="spring/spring-beans-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-core-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-tx-4.0.5.RELEASE.jar"/>
+				<include name="jdbc/sqljdbc4.jar"/>
+				<include name="jdbc/bonecp-0.7.1.RELEASE.jar"/>
+				<include name="google/guava-14.0.jar"/>
+				<include name="slf4j-api-1.7.7.jar"/>
+				<include name="aliyun/ons/fastjson-1.1.41.jar"/>
+				<include name="aliyun/ons/netty-all-4.0.21.Final.jar"/>
+				<include name="aliyun/ons/ons-api-1.1.4.jar"/>
+				<include name="aliyun/ons/ons-client-1.1.4.jar"/>
+				<include name="aliyun/ons/rocketmq-client-3.2.1.jar"/>
+				<include name="aliyun/ons/rocketmq-common-3.2.1.jar"/>
+				<include name="aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+				<include name="apache/commons-io-2.4.jar"/>
+				<include name="mengwang/mengwang-client.jar"/>
+		   		<include name="jianzhou/jzsms-6.0.jar"/>
+		   	    <include name="joda/joda-time-2.5.jar"/>
+		   		<include name="aliyun/taobao-sdk-java-auto_1450317428716-20160109.jar"/>
+		   		<include name="apache/freemarker.jar"/>
+		   		<include name="jaxrs-ri-2.17/api/javax.ws.rs-api-2.0.1.jar"/>
+		   		<include name="jaxrs-ri-2.17/lib/jersey-client.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-common.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-container-jetty-http-2.17.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-container-servlet.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-container-servlet-core.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-proxy-client-2.21.jar"/>
+		   	    <include name="jaxrs-ri-2.17/lib/jersey-server.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/aopalliance-repackaged-2.4.0-b10.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/asm-debug-all-5.0.2.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/hk2-api-2.4.0-b10.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/hk2-locator-2.4.0-b10.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/hk2-utils-2.4.0-b10.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/javassist-3.18.1-GA.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/javax.annotation-api-1.2.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/javax.inject-2.4.0-b10.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/javax.servlet-api-3.0.1.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/jaxb-api-2.2.7.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/jersey-guava-2.17.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/org.osgi.core-4.2.0.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/osgi-resource-locator-1.0.1.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/persistence-api-1.0.jar"/>
+		   	    <include name="jaxrs-ri-2.17/ext/validation-api-1.1.0.Final.jar"/>
+			   	<include name="jetty/9.2.11/jetty-continuation-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-http-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-io-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-server-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-util-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/servlet-api-3.1.jar"/>
+			   	<include name="jetty/9.2.11/jetty-webapp-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-servlet-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-security-9.2.11.v20150529.jar"/>
+			   	<include name="jetty/9.2.11/jetty-xml-9.2.11.v20150529.jar"/>
+		   		<include name="zookeeper-3.4.6/zookeeper-3.4.6.jar"/>
+		   		<include name="slf4j/slf4j-log4j12-1.6.1.jar"/>
+		   		<include name="commons-lang/commons-lang/2.6/commons-lang-2.6.jar"/>
+		   		<include name="axis/commons-httpclient-3.1.jar"/>
+		   		<include name="common/commons-collections-3.2.1.jar"/>
+		   		<include name="common/commons-beanutils-core-1.8.0.jar"/>
+		   		<include name="dahansantong/ezmorph-1.0.6.jar"/>
+		   		<include name="dahansantong/json-lib-2.4-jdk15.jar"/>
+		   		<include name="dahansantong/ctc-smscloud-voice-jsonhttp.jar"/>
+	        </fileset>  
+	    </copy>
+	    <echo level="info">拷贝MessageLauncher依赖包完毕......</echo>
+	</target>
+	  
+    <!--编译 -->  
+    <target name="compile" depends="copy">  
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "" includeantruntime="true">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        </javac>  
+    	<echo>编译MessageLauncher成功......</echo>
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar-project-with-lib" depends="compile" description="jar taget">
+    	<!--构造打包时Class-Path需要的路径, pathsep是分隔符 -->
+	    <pathconvert property="libs" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <flattenmapper />
+	               <!--  <globmapper from="*" to="lib/*" /> -->
+	            </chainedmapper>
+	        </mapper>
+	        <!--按照mapper定义的格式组合lib目录下面的所有jar文件，形成诸如lib/jar1.jar lib/jar2.jar的字符串-->
+	        <fileset dir="${temp.messagelauncher.dir}">
+	            <include name="*.jar" />
+	        </fileset>
+	    </pathconvert>
+        <jar destfile="${output.dir}/${project.name}/${jarname}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>  
+                <attribute name="Class-Path" value="."/>  
+                <attribute name="Rsrc-Main-Class" value="catfish.msglauncher.Driver"/>                
+                <attribute name="Rsrc-Class-Path" value="./ ${libs}"/>  
+            </manifest>
+            <zipfileset src="${lib.dir}/jar-in-jar-loader.zip"/> 
+            <zipfileset dir="${temp.messagelauncher.dir}" includes="*.jar"/>  
+        </jar>
+    </target>
+
+    <target name="jar-project-without-lib" depends="compile" description="jar taget">
+        <jar destfile="${output.dir}/${project.name}/MessageLauncher-sdk.jar" basedir="${classes.dir}">
+            <manifest>
+				<attribute name="Implementation-Version" value="${buildVersion}"/>
+	   		</manifest>
+        </jar>
+    </target>
+
+    <target name="jar" depends="jar-project-with-lib,jar-project-without-lib" description="jar target">
+    </target>
+
+    
+	
+</project>  

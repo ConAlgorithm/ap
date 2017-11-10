@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="api"/>
+	<classpathentry kind="src" path="channels"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServices"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FlowController"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/log4j/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar" sourcepath="C:/Users/Alex/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mongo/mongo-java-driver-2.12.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/api/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

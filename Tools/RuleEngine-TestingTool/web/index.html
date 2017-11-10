@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+       <title>规则测试管理平台</title>
+       <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+       <link rel="stylesheet" type="text/css" href="ext-5.0.0.736/build/packages/ext-theme-classic/build/resources/ext-theme-classic-all.css">
+       <link rel="stylesheet" type="text/css" href="css/index.css">
+       <link rel="stylesheet" type="text/css" href="css/widget.css">
+       <script type="text/javascript" src="jquery/jquery-1.10.2.min.js"></script>
+       <script type="text/javascript" src="ext-5.0.0.736/build/ext-all.js"></script> 
+       <script type="text/javascript" src="ext-5.0.0.736/build/packages/ext-theme-classic/build/ext-theme-classic.js"></script>
+       <script type ="text/javascript" src="index.js"></script>
+       <script type="text/javascript">
+           MAP = {
+        		POS:{
+        		   pkg: 'app',
+        		   prd: 'POS'
+        		},
+        		PDL:{
+        		   pkg: 'pdl',
+        		   prd: 'PDL'
+        		},
+        		CASHLOAN:{
+        		   pkg: 'cashloan',
+        		   prd: 'CASHLOAN'
+        		}
+           };
+           CURRENT = MAP.POS;
+           ENVIROMENT = "test";
+           AnalyzerUrl = "http://127.0.0.1:8092/model/";
+       </script>   
+    </head>
+    <body background="images/square.gif">
+       <div class="header"></div>
+       <div id="main"></div>
+       <div id="login"></div>
+       <div id="moduleFrame"></div>
+       
+      <!--  <form name="reply"  method="post" action = 'testing/testcase/upload1'>  
+	        <input type="text" name="title"  size="80" value="testtex"/><br />  
+	        <textarea name="cont" cols="80" rows="12"></textarea><br />  
+	        <input type="submit" value="提交" >  
+	        <input type="file" name="testfile">
+       </form>  -->
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="SalesDataSynchronizer">
+	<property name="project.name" value="SalesDataSynchronizer"/>
+	<property name="main.class" value="catfish.sales.synchronizer.Driver"/>
+	<import file="${framework.lib.dir}/build/shared.xml"/>
+	
+	<target name="copy" depends="copy-catfishservices-dep">
+	    <copy todir="${project.temp.dir}" flatten="true">
+	    	<fileset dir="${lib.dir}">
+	    		<include name="jdbc/mysql-connector-java-5.1.9.jar"/>
+	    	</fileset>
+	    	<fileset dir="${framework.lib.dir}">
+    			<include name="CatfishBase/CatfishBase.jar" />
+	    		<include name="CatfishServices/CatfishServices.jar" />
+    			<include name="FrameworkBase/FrameworkBase.jar" />
+	    		<include name="CatfishServer.jar" />
+    	    </fileset>
+	    	<fileset dir="${output.dir}">
+	    		<include name="CatfishSales/CatfishSales.jar" />
+	    	</fileset>
+	    </copy>
+	    <echo level="info">拷贝${project.name}依赖包完毕......</echo>
+	</target>
+	
+    <!--编译 -->  
+    <target name="compile" depends="copy,compile-project">
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="compile,jar-project-with-lib" description="jar taget">
+    </target>
+	
+</project>  

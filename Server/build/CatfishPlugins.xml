@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="CatfishPlugins">
+	<property name="project.name" value="CatfishPlugins"/>
+	<property name="main.class" value="catfish.plugins.Driver"/>
+	<import file="${framework.lib.dir}/build/shared.xml"/>
+
+	<target name="copy" depends="copy-catfishservices-dep">
+	    <copy todir="${project.temp.dir}" flatten="true">
+		   <fileset dir="${lib.dir}">
+		   		<include name="itext/itextpdf-5.5.6.jar"/>
+		   		<include name="itext/xmlworker-5.5.6.jar"/>
+				<include name="apache/pdfbox-app-2.0.0.jar"/>
+				<include name="bsApi-2.3.7-shaded.jar"/>
+	        </fileset>
+	    	<fileset dir="${framework.lib.dir}">
+				<include name="CatfishBase/CatfishBase.jar" />
+                <include name="FrameworkBase/FrameworkBase.jar"/>
+                <include name="CatfishServer.jar"/>
+                <include name="CatfishServices/CatfishServices.jar"/>
+            </fileset>
+            <fileset dir="${catfishapi.lib.dir}">
+                <include name="CowfishService-model.jar" />
+                <include name="GrasscarpServices-models.jar"/>
+                <include name="fpp-api/fpp-api-1.0.jar"/>
+                <include name="installment-settlement-api-1.0.3.jar"/>
+            </fileset>
+	    </copy>
+	    <echo level="info">拷贝${project.name}依赖包完毕......</echo>
+	</target>
+
+    <!--编译 -->
+    <target name="compile" depends="copy">
+        <javac fork="yes" executable="${java8.compiler}" target="1.8" srcdir="${project.src.dir}" destdir="${project.classes.dir}" sourcepath = "" includeantruntime="true">
+            <compilerarg line="-encoding UTF-8"/>
+            <classpath refid="lib-classpath"/>
+        </javac>
+    	<echo>编译${project.name}成功......</echo>
+    </target>
+
+    <target name="copy-template">
+		<copy todir="${output.dir}/${project.name}">
+			<fileset dir="${project.name}">
+				<include name="agreementTemplate/*"/>
+            </fileset>
+		</copy>
+	</target>
+
+    <!--打包jar文件 -->
+    <target name="jar" depends="compile,jar-project-with-lib,copy-template" description="jar taget">
+    </target>
+
+</project>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toprules-config>
+	<!-- c3p0 -->
+	<!--  -->
+	 <datasource id="engineDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass"><value>com.mysql.jdbc.Driver</value></property>
+		<property name="jdbcUrl"><value>jdbc:mysql://rdsxnu69etm6o21ci2yfo.mysql.rds.aliyuncs.com:3306/qincangrules?characterEncoding=UTF-8</value></property>
+		<property name="user"><value>qincangrules</value></property>
+		<property name="password"><value>qincangrulestest</value></property>
+		<property name="minPoolSize"><value>5</value></property>
+		<property name="maxPoolSize"><value>50</value></property>
+		<property name="initialPoolSize"><value>5</value></property>
+		<property name="acquireIncrement"><value>5</value></property>
+		
+		<!-- 使用这里配置的sql进行检测 -->
+		<property name="preferredTestQuery">select uuid from tbl_tr_menu where menu_code = '11001'</property>
+		<!-- 获取连接的时将校验连接的有效性 -->
+        <property name="testConnectionOnCheckout">true</property>
+        <!-- 每xx秒检查所有连接池中的空闲连接 -->
+		<property name="idleConnectionTestPeriod">120</property>
+		
+	</datasource>
+	
+	<!-- dbcp -->
+	<!--  	
+	<datasource id="engineDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+		<property name="url"><value>jdbc:mysql://localhost:3306/trdb?characterEncoding=UTF-8</value></property>
+		<property name="username"><value>tr_user</value></property>
+		<property name="password"><value>tr_user</value></property>
+		<property name="initialSize"><value>10</value></property>
+		<property name="maxActive"><value>50</value></property>
+		<property name="minIdle"><value>5</value></property>
+		<property name="maxIdle"><value>20</value></property>
+		<property name="maxWait"><value>5000</value></property>
+	</datasource>
+	-->
+	
+	<!-- jndi -->
+	<!-- 
+	<datasource id="engineDataSource" class="javax.naming.InitialContext">
+		<property name="jndiName"><value>jdbc/trDatasource</value></property>
+	</datasource>
+	-->
+	<!-- refresh config -->
+	<refresh id="ruleRefreshConfig" class="com.huateng.toprules.core.config.RuleRefreshConfig">
+		<property name="refreshType">
+            <value>all</value>
+        </property>
+        <property name="projectNames">
+            <value></value>
+        </property>
+        <property name="loadJar">
+            <value>false</value>
+        </property>
+        <property name="startDelay">
+            <value>0</value>
+        </property>
+        <!-- 单位毫秒，现在是一周自动刷新一次 -->
+        <property name="repeatInterval">
+           <value>604800000</value>
+        </property>
+        <property name="running">
+            <value>true</value>
+        </property>
+        <property name="transaction">
+            <value>local</value>
+        </property>
+	</refresh> 
+	 
+</toprules-config>

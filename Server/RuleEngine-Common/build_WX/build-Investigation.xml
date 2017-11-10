@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="InvestigationModel">    
+    <property name="jarname" value="Investigation-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+        	<include name="${model-in.dir}/AdditionalContactRiskForm.class"/>
+    	    <include name="${model-in.dir}/InvestigationInForm.class"/>
+        	
+    	    <include name="${model-domain.dir}/PhoneCallResult.class"/>
+    	    <include name="${model-domain.dir}/CheckUserRiskRevealResult.class"/>
+    	    <include name="${model-domain.dir}/CheckUserSoundResult.class"/>
+    	    <include name="${model-domain.dir}/CheckUserAnswerWithReminderResult.class"/>
+    	    
+        	<include name="${model-domain.dir}/CheckContactRiskRevealResult.class"/>
+        	<include name="${model-domain.dir}/CheckContactSoundResult.class"/>
+        	<include name="${model-domain.dir}/CheckContactAnswerWithReminderResult.class"/>
+
+        	<include name="${model-domain.dir}/CheckCompanyRiskRevealResult.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyAnswerPersonResult.class"/>
+        	<include name="${model-domain.dir}/CheckContactAnswerWithReminderResult.class"/>
+        	
+        	<include name="${model-domain.dir}/IdCardAccordanceResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoAccordanceResult.class"/>
+        	<include name="${model-domain.dir}/BankCardPhotographySiteResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoPhotographySiteResult.class"/>
+        	<include name="${model-domain.dir}/MerchantRiskHintResult.class"/>
+        	<include name="${model-domain.dir}/IdCardGeneralResult.class"/>
+        	<include name="${model-domain.dir}/IdCardInfoResult.class"/>
+        	<include name="${model-domain.dir}/IdCardInfoComparisionResult.class"/>
+        	<include name="${model-domain.dir}/IdCardPersonalPicResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoPhotographyResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoPersonalPicResult.class"/>
+        	<include name="${model-domain.dir}/BankCardPhotographySiteResult.class"/>
+    		<include name="${model-domain.dir}/BankCardGeneralResult.class"/>
+        	<include name="${model-domain.dir}/BankCardValidationResult.class"/>
+        	<include name="${model-domain.dir}/BankCardComparisionResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoGeneralResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoPhotographySiteResult.class"/>
+        	<include name="${model-domain.dir}/ProfessionIdentificationResult.class"/>
+    		<include name="${model-domain.dir}/CompanyTypeResult.class"/>
+        	<include name="${model-domain.dir}/PhotoFromPoliceExistResult.class"/>
+        	<include name="${model-domain.dir}/IdCardPhoneComparisionResult.class"/>
+        	<include name="${model-domain.dir}/HomeCreditRecordResult.class"/>
+        	<include name="${model-domain.dir}/CourtExecutionResult.class"/>
+    		<include name="${model-domain.dir}/IdCardGeneralResult.class"/>
+        	<include name="${model-domain.dir}/IdCardInfoResult.class"/>
+        	<include name="${model-domain.dir}/IdCardPersonalPicResult.class"/>
+        	<include name="${model-domain.dir}/IdCardInfoComparisionResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoPhotographyResult.class"/>
+    		<include name="${model-domain.dir}/HeadPhotoPersonalPicResult.class"/>
+        	<include name="${model-domain.dir}/BankCardPhotographySiteResult.class"/>
+        	<include name="${model-domain.dir}/BankCardGeneralResult.class"/>
+    		<include name="${model-domain.dir}/BankCardTypeResult.class"/>
+        	<include name="${model-domain.dir}/BankCardValidationResult.class"/>
+    		<include name="${model-domain.dir}/BankCardComparisionResult.class"/>
+        	<include name="${model-domain.dir}/HeadPhotoGeneralResult.class"/>
+        	<include name="${model-domain.dir}/CheckBinaryConsistencyResult.class"/>
+        	<include name="${model-domain.dir}/YesNoResult.class"/>
+        	<include name="${model-domain.dir}/CheckContactRiskRevealResult.class"/>
+    		<include name="${model-domain.dir}/CheckContactSoundResult.class"/>
+        	<include name="${model-domain.dir}/CheckContactAnswerWithReminderResult.class"/>
+        	<include name="${model-domain.dir}/CheckBinaryConsistencyResult.class"/>
+        	<include name="${model-domain.dir}/InputIdCardInfoCertTypeResult.class"/>
+        	
+        	<!--电子借条-->
+        	<include name="${model-domain.dir}/CheckIOUContentsResult.class"/>
+        	<include name="${model-domain.dir}/CheckIOUHeadPhotoClarityResult.class"/>
+    		<include name="${model-domain.dir}/CheckIOUTextClarifyResult.class"/>
+        	<include name="${model-domain.dir}/CheckIOUWithFieldPhotoResult.class"/>
+        	<include name="${model-domain.dir}/CheckIOUFakedResult.class"/>
+        	<include name="${model-domain.dir}/CheckIOUTextCorrectResult.class"/>
+        	<!---->
+        	
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>    	             
+    	    <include name="${model-domain.dir}/adapter/EnumDomainAdapter.class"/>   
+        	
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    <include name="${catfish-base.dir}/StartupConfig.class"/>
+    	    
+        	<include name="${catfish-common.dir}/*.class"/>
+        	
+        	<include name="${catfish-common.dir}/CatfishEnum.class"/>
+        <!--	
+        	<include name="${catfish-common.dir}/PhoneCallResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserRiskRevealResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserSoundResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserAnswerWithReminderResult.class"/>
+    	    
+        	<include name="${catfish-common.dir}/CheckContactRiskRevealResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactSoundResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+
+        	<include name="${catfish-common.dir}/CheckCompanyRiskRevealResult.class"/>
+        	<include name="${catfish-common.dir}/CheckCompanyAnswerPersonResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+        -->
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

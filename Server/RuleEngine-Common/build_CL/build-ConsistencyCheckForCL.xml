@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="ConsistencyCheckModel">
+    <property name="jarname" value="ConsistencyCheckForCL-model.jar"/>
+
+    <target name="jar">
+        <!-- jar文件的输出路径 -->
+        <jar destfile="${output.cl.dir}/${jarname}" basedir="${temp.cl.dir}">
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in-cl.dir}/ConsistencyCheckInForm.class"/>
+
+        	<include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+        	<include name="${model.dir}/adapter/DBFieldAdapter.class"/>
+
+        	<include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+
+        	<include name="${catfish-common.dir}/CatfishEnum.class"/>
+        	<include name="${model-domain.dir}/InOrNotResult.class" />
+			<include name="engine/enums/InOrNotResult.class" />
+
+            <manifest>
+                <attribute name="Main-class" value="${mainclass}"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

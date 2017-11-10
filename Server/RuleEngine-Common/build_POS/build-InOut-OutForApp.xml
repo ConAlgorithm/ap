@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="OutModel">    
+    <property name="jarname" value="InOut-OutForApp-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	
+        	<include name="${model.dir}/BaseForm.class"/>
+        	
+        	<include name="${model-inout-app.dir}/*.class"/>
+        	<include name="${model-out.dir}/*.class"/>
+        	<include name="${model-domain.dir}/QuestionnaireStrategy.class"/>
+        	
+        	<include name="${model-domain.dir}/app/UploadFileFlag.class"/>
+        	<include name="${model-domain.dir}/RecommendUserRole.class"/>
+        	<include name="${model-domain.dir}/RandomNumber.class"/>
+        	<include name="${model-domain.dir}/app/PicReuploadReasonForApp.class"/>
+        	<include name="${model-domain.dir}/app/consts/PicReuploadReason.class"/>
+        	
+            <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+        	<include name="${model-domain.dir}/adapter/RandomNumberDomainAdapter.class"/>
+        	
+        	<include name="${model-config.dir}/ModelConfig.class"/>
+        	
+        	<include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+ 
+    	    <include name="${catfish-common.dir}/CatfishEnum.class"/>   	    
+    	    <include name="${catfish-common.dir}/QuestionnaireStrategy.class"/>
+        	 
+        	<include name="${catfish-common.dir}/app/UploadFileFlag.class"/>
+        	<include name="${catfish-common.dir}/RecommendUserRole.class"/>
+        	<include name="${catfish-common.dir}/RuleEngineDecisionResult.class"/>
+        	
+        	<!--<include name="${catfish-business.dir}/EnumUtils/EnumUtils.class"/>-->
+
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="DynamicApplicationModel">    
+    <property name="jarname" value="DynamicApplication-model.jar"/>  
+	
+    <target name="jar">   
+        <!-- jar文件的输出路径 --> 
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in.dir}/DynamicApplicationInForm.class"/>
+    	      	    
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

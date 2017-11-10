@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="ThirdPartyBusinessModel">
+ 
+    <property name="jarname" value="ThirdPartyBusinessModel.jar"/>
+ 
+ 	<property name="thirdParty.dir" value="../Server/ThirdPartyBusinessModel"/>
+	<property name="src.dir" value="${thirdParty.dir}/src"/>  
+    <property name="classes.dir" value="${temp.thirdpartybusinessmodel.dir}/bin"/>  
+     		
+ 	<target name="build-thirdpartybusinessmodel">
+ 	    <mkdir dir="${classes.dir}" />
+	    <ant antfile="${thirdParty.dir}/build-thirdpartybusinessmodel.xml" target="compile"></ant>
+	</target>
+	
+    <!--打包jar文件 -->  
+    <target name="jar" depends="build-thirdpartybusinessmodel" description="jar taget">
+	    <!--构造打包时Class-Path需要的路径, pathsep是分隔符 -->
+	    <pathconvert property="libs" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <flattenmapper />
+	               <!--  <globmapper from="*" to="lib/*" /> -->
+	            </chainedmapper>
+	        </mapper>
+	        <!--按照mapper定义的格式组合lib目录下面的所有jar文件，形成诸如lib/jar1.jar lib/jar2.jar的字符串-->
+	        <fileset dir="${temp.thirdpartybusinessmodel.dir}">
+	            <include name="*.jar" />
+	        </fileset>
+	    </pathconvert>
+        <jar destfile="${output.dir}/${jarname}" basedir="${classes.dir}">
+        </jar>
+    </target>
+</project>  

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="InvestigationModel">    
+    <property name="jarname" value="InvestigationForApp-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+        	<include name="${model-in-app.dir}/AdditionalContactRiskForm.class"/>
+    	    <include name="${model-in-app.dir}/InvestigationInForm.class"/>
+        	
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactAttitudeOfPhoneResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactCareApplicantResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactHereJudgeResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactIdentificationResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneAnswererResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactPhoneCallResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactRiskPromptResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSceneIntroduceResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_11ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_12ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_13ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_14ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_15ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_16ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_17ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckAdditionalContactSoundJudgeResult_18ForApp.class"/>
+        	<include name="${model-domain.dir}/CheckBilFinanceRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckBuckleDoesSignatureAndIdNameMatchForApp.class"/>
+        	<include name="${model-domain.dir}/CheckBuckleIsBuckleAgreementForApp.class"/>
+        	<include name="${model-domain.dir}/CheckBuckleSignatureClarifyResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckBuckleTextClarifyResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyAddressConsistencyForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyAnswerPersonAnswerResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyAnswerPersonRiskPromptResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyApplicantCheckResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyIdentificationResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanyPhoneRelationshipResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCompanySomeElseHelpResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCourtExecutedForApp.class"/>
+        	<include name="${model-domain.dir}/CheckCreditEaseRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckDafyRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactAttitudeOfPhoneResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactCareApplicantResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactHereJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactIdentificationResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactPhoneAnswererResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactRiskPromptResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactSceneIntroduceResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckFirstContactSoundJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckHaodaiRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckHomeCreditRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageComparisionForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageHeadPhotoFaceExpressionForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageHeadPhotoHeadDirectionForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageHeadPhotoPersonalPicForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageIdCardInfoForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImageIdCardPersonalPicForApp.class"/>
+        	<include name="${model-domain.dir}/CheckImagePhotoFromPoliceExistForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUImageComparisionForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUIsHeadPhotoClarityForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUIsIOUForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUIsSmileForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUIsTextClarifyForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOUMobileColorForApp.class"/>
+        	<include name="${model-domain.dir}/CheckIOURingFingerForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantAnswererResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantCustomerNameConsistentForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantCustomerOnSpotForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantPurchaseConfirmedForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantReplacedBySalesForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantRiskHintForApp.class"/>
+        	<include name="${model-domain.dir}/CheckMerchantStoreNameConsistentForApp.class"/>
+        	<include name="${model-domain.dir}/CheckPersonalInfoCompanyTypeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactAttitudeOfPhoneResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactCareApplicantResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactHereJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactIdentificationResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactPhoneAnswererResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactRiskPromptResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactSceneIntroduceResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckSecondContactSoundJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactAttitudeOfPhoneResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactCareApplicantResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactHereJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactIdentificationResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactPhoneAnswererResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactRiskPromptResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactSceneIntroduceResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckThirdContactSoundJudgeResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserCancelApplicationReasonForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserCarenessLevelForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserCompanyNameForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserConsequenceIntroduceResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserDislikeLevelForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserIDCardAddressForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserIdentificationForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserInstalmentNumberAndValueForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserIsCancelApplicationForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserJXLInforCrawlStatusForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserPhoneAnswererResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserPhoneCallResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserRiskRevealForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserSceneIntroduceResultForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserSoundForApp.class"/>
+        	<include name="${model-domain.dir}/CheckUserSymbolicAnimalForApp.class"/>
+        	<include name="${model-domain.dir}/CheckVCashRecordForApp.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBankCardInfoIsRecognizableForApp.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBankCardPhotoIsRecognizableForApp.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherImageIsBankCardForApp.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherImageIsIdCardPhotoForApp.class"/>
+        	<include name="${model-domain.dir}/FinishApplicationOperationForApp.class"/>
+        	<include name="${model-domain.dir}/InputIdCardInfoIsOtherCertProvidedForApp.class"/>
+        	<include name="${model-domain.dir}/InputIdCardInfoOtherCertTypeForApp.class"/>
+        	<include name="${model-domain.dir}/LoanMoneyFailureReasonForApp.class"/>
+        	<include name="${model-domain.dir}/LoanMoneyResultForApp.class"/>
+        	<include name="${model-domain.dir}/TransactionMonitorRejectReasonForApp.class"/>
+        	<include name="${model-domain.dir}/TransactionMonitorResultForApp.class"/>
+        	<include name="${model-domain.dir}/app/CheckWhetherCustomerPhotoIsTheSamePersonForApp.class"/>
+        	<include name="${model-domain.dir}/app/CheckWhetherDGroupPhotoIsRecognizableForApp.class"/>
+        	<include name="${model-domain.dir}/app/CheckWhetherDPhotoIsTheSamePersonForApp.class"/>
+        	<include name="${model-domain.dir}/app/CheckWhetherImageIsDGroupPhotoForApp.class"/>
+        	
+        	<!--手动添加字段-->        	
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>    	             
+    	    <include name="${model-domain.dir}/adapter/EnumDomainAdapter.class"/>   
+        	
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    <include name="${catfish-base.dir}/StartupConfig.class"/>
+    	    
+        	<!--<include name="${catfish-common.dir}/*.class"/>-->
+        	
+        	<include name="${catfish-common.dir}/CatfishEnum.class"/>
+        <!--	
+        	<include name="${catfish-common.dir}/PhoneCallResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserRiskRevealResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserSoundResult.class"/>
+    	    <include name="${catfish-common.dir}/CheckUserAnswerWithReminderResult.class"/>
+    	    
+        	<include name="${catfish-common.dir}/CheckContactRiskRevealResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactSoundResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+
+        	<include name="${catfish-common.dir}/CheckCompanyRiskRevealResult.class"/>
+        	<include name="${catfish-common.dir}/CheckCompanyAnswerPersonResult.class"/>
+        	<include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+        -->
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

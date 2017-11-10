@@ -1,0 +1,89 @@
+.contentBox{
+	float:left;
+	background-color: white;	
+	margin: 5px;
+}
+
+.contentBox.showBorder{
+	border: solid 1px #99c;
+}
+
+.innerBox {
+    margin: 5px;
+	padding: 0px;
+	background-color: white;
+}
+
+.contentBox.itemHover:hover{
+	cursor: pointer;
+	border: solid 5px #CCCCCC;
+}
+
+.contentBox.shadow {
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 2px 3px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+}
+
+
+.item-line {
+	float:left; 
+	width:100%; 
+	margin-bottom:5px;
+	word-break:break-all;
+}
+.showBottom{
+	border-bottom: solid 1px #CCCCCC;
+}
+
+.domains-container {
+	width:410px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.testcases-container {
+	width:100%;
+	text-align: center;
+}
+
+.run-case:hover{
+	cursor: pointer;
+	background-color: #CCCCCC;
+	font-size: 1.5em;
+}
+
+.executeResult{
+	float:left; width:25%
+}
+.executeResult .label{
+	float:left; 
+	width:40%; 
+	font:italic;
+}
+.executeResult .value{
+	float:left;
+	width:60%;font:bold;
+}
+.stopExecute{
+	margin-top:2px;
+	background-color:#F00; 
+	border-radius:25px
+}
+.console-container{
+	
+}
+
+.detail-line{
+	word-wrap:break-word;
+}
+.detail-expected{
+	word-wrap:break-word;
+}
+.detail-real{
+	word-wrap:break-word;
+}
+.detail-debug{
+	word-wrap:break-word;
+}

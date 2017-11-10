@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="LoanMoneyOutModel">    
+    <property name="jarname" value="LoanMoneyOutForPDL-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-inout-pdl.dir}/LoanMoneyDecisionOutForm.class"/>
+        	
+    	    <include name="${model.dir}/adapter/DBFieldAdapter.class"/>
+    	    
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>
+        </jar>  
+    </target>  
+</project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="ApplicationModel">    
+    <property name="jarname" value="Application-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in.dir}/ApplicationInForm.class"/>
+    	    <include name="${model-domain.dir}/EducationalBackground.class"/>
+    	    <include name="${model-domain.dir}/MarriageStatus.class"/>
+    	    <include name="${model-domain.dir}/LivingCondition.class"/>
+    	    <include name="${model-domain.dir}/NthJob.class"/>
+    	    
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+    	    
+    	    <include name="${model.dir}/adapter/DBFieldAdapter.class"/>
+    	    <include name="${model.dir}/adapter/PrincipalAdapter.class"/>
+    	    
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    
+    	    <include name="${catfish-common.dir}/EducationalBackground.class"/>
+    	    <include name="${catfish-common.dir}/MarriageStatus.class"/>
+    	    <include name="${catfish-common.dir}/LivingCondition.class"/>
+    	    <include name="${catfish-common.dir}/NthJob.class"/>
+    	    <include name="${catfish-common.dir}/CatfishEnum.class"/>
+
+        	<zipfileset excludes="META-INF/*.SF" src="${temp.dir}/lib/joda-time-2.5.jar" /> 
+        	
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

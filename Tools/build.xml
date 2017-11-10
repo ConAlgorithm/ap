@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project default="final-clean" name="BuildAllTools"> 
+    <property name="lib.dir" value="D:\3rdParty\jars" />
+	<property name="framework.lib.dir" value="D:\FrameworkBuilds\ReleaseBranch\Candidate" />
+	
+	<!--<property name="lib.dir" value="\\cfserver01\Share\Projects\jars" />
+	<property name="framework.lib.dir" value="\\cfserver01\Share\Projects\jars\catfishframework" />-->
+
+	<property name="ruleEngineAnalyzer.dir" value="RuleEngine-Analyzer"/>
+	<property name="ruleEngineTestingTool.dir" value="RuleEngine-TestingTool"/>	
+	
+	<property name="temp.dir" value="temp"/>
+	<property name="temp.ruleEngineAnalyzer.dir" value="temp/RuleEngine-Analyzer"/> 
+	<property name="temp.ruleEngineTestingTool.dir" value="temp/RuleEngine-TestingTool"/> 
+	<property name="temp.ruleengine.dir" value="temp/RuleEngine-Common"/>
+	<property name="temp.thirdpartybusinessmodel.dir" value="temp/ThirdPartyBusinessModel" />
+    <property name="output.dir" value="out"/>
+  	
+    <!--CatfishBase 依赖包-->
+	<fileset dir="${lib.dir}" id="catfish.ref">              
+	    <include name="log4j/log4j-1.2.17.jar"/>
+		<include name="log4j/log4j-1.2.17.jar"/>
+		<include name="google/gson-2.2.4.jar"/>
+		<include name="aliyun/aliyun-sdk-mqs-1.0.2.jar"/>
+		<include name="spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+		<include name="spring/spring-tx-4.0.5.RELEASE.jar"/>
+		<include name="spring/spring-core-4.0.5.RELEASE.jar"/>
+		<include name="joda/joda-time-2.5.jar"/>
+		<include name="jdbc/bonecp-0.7.1.RELEASE.jar"/>
+		<include name="mongo/mongo-java-driver-2.12.4.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/commons-logging-1.2.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/commons-codec-1.9.jar"/>
+		<include name="apache/httpcomponents-asyncclient-4.1/lib/httpasyncclient-4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpasyncclient-cache-4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpclient-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpclient-cache-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpcore-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpmime-4.4.1.jar"/>
+        <include name="apache/httpcomponents-asyncclient-4.1/lib/httpcore-nio-4.4.1.jar"/>
+		<include name="aliyun/ons/ons-api-1.1.4.jar"/>
+		<include name="aliyun/ons/ons-client-1.1.4.jar"/>
+		<include name="aliyun/ons/fastjson-1.1.41.jar"/>
+		<include name="aliyun/ons/netty-all-4.0.21.Final.jar"/>
+		<include name="aliyun/ons/rocketmq-client-3.2.1.jar"/>
+		<include name="aliyun/ons/rocketmq-common-3.2.1.jar"/>
+		<include name="aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+		<include name="axis/axiom-api-1.2.13.jar"/>
+		<include name="pinyin4j-2.5.0.jar"/>
+	</fileset>
+	<fileset dir="${framework.lib.dir}" id="catfishframework.ref">
+		<include name="FrameworkBase/FrameworkBase.jar"/>
+		<include name="CatfishBase/CatfishBase.jar"/>
+	</fileset>
+		
+	<target name="preClean">  
+		<delete dir="${temp.dir}" />
+		<delete dir="${output.dir}" />
+		<delete dir="${ruleEngineAnalyzer.dir}/bin" />
+		<delete dir="${ruleEngineTestingTool.dir}/bin" />
+    	<echo level="info">预清理完毕......</echo> 
+	</target>
+	
+    <target name="init" depends="preClean">  
+        <mkdir dir="${temp.dir}"/>
+        <mkdir dir="${output.dir}"/> 
+		<mkdir dir="${temp.thirdpartybusinessmodel.dir}" />
+		<mkdir dir="${temp.ruleengine.dir}"/> 
+    	<mkdir dir="${temp.ruleEngineAnalyzer.dir}"/> 
+    	<mkdir dir="${temp.ruleEngineTestingTool.dir}"/> 
+    	<mkdir dir="${ruleEngineAnalyzer.dir}/bin" />
+    	<mkdir dir="${ruleEngineTestingTool.dir}/bin" />
+    	<echo level="info">初始化完毕......</echo>
+    </target>
+	   	
+	<target name="copy-catfish" depends="init">	
+        <copy todir="${temp.thirdpartybusinessmodel.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+		   <fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝Catfish依赖包到ThirdPartyBusinessModel完毕......</echo>	
+	    <copy todir="${temp.ruleengine.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+		   <fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝Catfish依赖包到RuleEngine-Common完毕......</echo>
+		
+		<copy todir="${temp.ruleEngineAnalyzer.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+		   <fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝Catfish依赖包到RuleEngine-Analyzer完毕......</echo>
+		
+		<copy todir="${temp.ruleEngineTestingTool.dir}" flatten="true">
+		   <fileset refid="catfish.ref"></fileset>
+		   <fileset refid="catfishframework.ref"></fileset>
+		</copy>
+		<echo level="info">拷贝Catfish依赖包到RuleEngine-TestingTool完毕......</echo>
+	</target>	
+	<!--打包jar-->
+	<target name="jar" depends="copy-catfish" description="jar taget">
+	    <ant antfile="${ruleEngineTestingTool.dir}/build-ThirdPartyBusinessModel.xml"></ant>
+		<echo>打包ThirdPartyBusinessModel完毕......</echo>
+	    <ant antfile="${ruleEngineTestingTool.dir}/build-RuleEngine-Common.xml"></ant>
+		<echo>打包RuleEngine-Common完毕......</echo>	
+		<ant antfile="${ruleEngineTestingTool.dir}/build.xml"></ant>
+		<echo>打包RuleEngine-TestingTool完毕......</echo>
+		<ant antfile="${ruleEngineAnalyzer.dir}/build.xml"></ant>
+		<echo>打包RuleEngine-Analyzer完毕......</echo>
+    </target>
+	
+	<target name="final-clean" depends="jar">
+		<delete dir="${temp.dir}" />
+        <echo level="info">最后清理完毕......</echo>
+	</target>
+</project>  

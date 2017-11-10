@@ -1,0 +1,87 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+apply plugin: 'application'
+apply plugin: 'maven'
+
+def frameworkBaseDir = System.getenv("FRAMEWORK_DIR")
+if(frameworkBaseDir == null) {
+    frameworkBaseDir = '\\\\CFSERVER01\\Share\\Projects\\jars\\catfishframework'
+}
+println 'The frameworkBaseDir is : ' + frameworkBaseDir
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+    }
+    test {
+    	java {
+    		srcDir 'src/test/java'
+    	}
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+         url "http://m2.neo4j.org/content/groups/public/"
+    }
+    mavenLocal()
+}
+
+dependencies {
+    compile(
+            'org.springframework:spring-jdbc:4.2.4.RELEASE',
+            'org.springframework:spring-context:4.2.4.RELEASE',
+            'org.springframework:spring-beans:4.2.4.RELEASE',
+            'org.springframework:spring-aspects:4.2.4.RELEASE',
+            'org.springframework:spring-core:4.2.4.RELEASE',
+            'org.springframework.data:spring-data-neo4j:4.1.1.RELEASE',
+            'org.springframework.data:spring-data-commons:1.10.0.RELEASE',
+            'org.springframework.data:spring-data-neo4j-rest:3.2.0.RELEASE',
+            'org.mongodb:mongo-java-driver:3.2.1',
+
+            'org.apache.httpcomponents:httpasyncclient:4.0-beta4',
+
+            'com.google.code.gson:gson:2.2.4',
+            'com.alibaba:fastjson:1.2.28',
+            'com.google.guava:guava:14.0',
+            
+            'org.neo4j:neo4j-enterprise-kernel:2.3.2',
+            'org.neo4j:neo4j-enterprise:2.3.2',
+            
+            'log4j:log4j:1.2.17',            
+            'org.slf4j:slf4j-log4j12:1.7.12',
+
+            'javax.validation:validation-api:1.1.0.Final',
+            
+            'com.jolbox:bonecp:0.7.1.RELEASE',
+
+            'com.hynnet:sqljdbc4-chs:4.0.2206.100',
+			'com.aliyun.mns:aliyun-sdk-mns:1.0.3',
+			'org.eclipse.jetty:jetty-server:9.2.5.v20141112',
+			'org.apache.ws.commons.axiom:axiom-api:1.2.13'
+    )
+
+    compile files(
+            frameworkBaseDir + '/CatfishBase/CatfishBase.jar',
+            frameworkBaseDir + '/FrameworkBase/FrameworkBase.jar',
+            frameworkBaseDir + '/CatfishServices/CatfishServices.jar',
+            frameworkBaseDir + '/CatfishServer.jar'
+    )
+    testCompile (
+            'junit:junit:4.10'
+    )
+}
+
+mainClassName = 'network.relationship.App'
+
+distTar {
+    archiveName = project.name + '.tar'
+}
+
+tasks.withType(JavaCompile) {  
+    options.encoding = "UTF-8"  
+}

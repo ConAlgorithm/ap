@@ -1,0 +1,41 @@
+<project default="jar" name="FlowController">
+
+    <property name="project.name" value="FlowController"/>
+    <property name="main.class" value="catfish.flowcontroller.Driver"/>
+    <import file="/home/maidanxia/src/framework/build/shared.xml"/>
+
+    <target name="copy" depends="copy-catfishservices-dep">
+        <copy todir="${project.temp.dir}" flatten="true">
+            <fileset dir="${framework.lib.dir}">
+                <include name="FrameworkBase/FrameworkBase.jar"/>
+                <include name="CatfishBase/CatfishBase.jar"/>
+                <include name="CatfishServer.jar"/>
+                <include name="CatfishServices/CatfishServices.jar"/>
+            </fileset>
+        </copy>
+        <echo level="info">copy ${project.name} dependence......</echo>
+    </target>
+
+    <target name="compile" depends="copy,compile-project">
+        <javac fork="yes" executable="${java8.compiler}" target="1.8" srcdir="${project.src.dir}" destdir="${project.classes.dir}" sourcepath = "" includeantruntime="true">
+            <compilerarg line="-encoding UTF-8"/>
+            <classpath refid="lib-classpath"/>
+        </javac>
+        <echo>编译${project.name}成功......</echo>
+    </target>
+
+    <target name="copy-config" depends="compile">
+        <copy todir="${output.dir}/${project.name}">
+            <fileset dir="${project.name}">
+                <include name="config/*.js"/>
+                <include name="flowinspector/**/*"/>
+                <include name ="dynamic.properties" />
+                <include name ="resources.properties" />
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="jar" depends="copy-config,jar-project-with-lib" description="jar target">
+    </target>
+
+</project>

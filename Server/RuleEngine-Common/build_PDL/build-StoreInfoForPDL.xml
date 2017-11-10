@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="StoreInfoModel">    
+    <property name="jarname" value="StoreInfoForPDL-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in-pdl.dir}/StoreInfoInForm.class"/>
+    	    <include name="${catfish-object.dir}/BaseObject.class"/>
+            <include name="${catfish-object.dir}/MerchantStoreObject.class"/>
+        	<include name="${catfish-object.dir}/InstallmentApplicationObject.class"/>
+        	<include name="${catfish-object.dir}/MerchantStoreRiskControlObject.class"/>
+            <include name="${catfish-object.dir}/context/MerchantStoreData.class"/>
+        	<include name="${catfish-object.dir}/MerchantUserObject.class"/>
+        	
+        	<include name="${model-domain.dir}/QuantityLimitDays.class"/>
+        	    	    
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+    	    
+    	    
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    
+    	    <include name="${catfish-common.dir}/CatfishEnum.class"/>
+    	    
+    	    <include name="${catfish-common.dir}/QuantityLimitDays.class"/>
+        	
+        	<zipfileset excludes="META-INF/*.SF" src="${temp.dir}/lib/joda-time-2.5.jar" /> 
+        	
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

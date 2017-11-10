@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="ThirdPartyBusinessModel"> 
+    
+    <property name="jarname" value="ThirdPartyBusinessModel.jar"/>
+    
+    <property name="src.dir" value="${thirdpartybusinessmodel.dir}/src"/>  
+    <property name="classes.dir" value="${thirdpartybusinessmodel.dir}/bin"/>  
+  		
+	<!--第三方jar-->  
+    <path id="lib-classpath">  
+        <fileset dir="${temp.thirdpartybusinessmodel.dir}">              
+            <include name="*.jar"/>			
+        </fileset>  
+    </path>
+	
+	<target name="copy">
+	    <copy todir="${temp.thirdpartybusinessmodel.dir}" flatten="true">
+		   <fileset dir="${lib.dir}">              
+				<include name="google/gson-2.2.4.jar"/>
+        <include name="apache/commons-codec-1.4.jar"/>
+		   	    <include name="apache/commons-logging-1.1.1.jar"/>
+	        </fileset>  
+	    </copy>
+	    <echo level="info">拷贝ThirdPartyBusinessModel依赖包完毕......</echo>
+	</target>
+	  
+    <!--编译 -->  
+    <target name="compile" depends="copy">  
+        <javac target="1.7" srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "" includeantruntime="true">
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        </javac>  
+    	<echo>编译ThirdPartyBusinessModel成功......</echo>
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="compile" description="jar taget">
+        <jar destfile="${output.dir}/${jarname}" basedir="${classes.dir}">        
+        </jar>
+    </target>
+	
+</project>  

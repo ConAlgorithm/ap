@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="CreditReferenceModel">
+    <property name="jarname" value="CreditReferenceForCL-model.jar"/>
+
+    <target name="jar">
+        <!-- jar文件的输出路径 -->
+        <jar destfile="${output.cl.dir}/${jarname}" basedir="${temp.cl.dir}">
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in-cl.dir}/CreditReferenceInForm.class"/>
+    	    <include name="${model-domain.dir}/BankReferenceResult.class"/>
+        	<include name="${model-domain.dir}/UserBlackListGrade.class"/>
+        	<include name="${model-domain.dir}/ResponseState.class"/>
+        	<include name="${model-domain.dir}/ConsumeRegionNative.class"/>
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+
+    	    <include name="${catfish-common.dir}/CatfishEnum.class"/>
+    	    <include name="${catfish-common.dir}/BankReferenceResult.class"/>
+        	<include name="${catfish-common.dir}/qhzx/UserBlackListGrade.class"/>
+        	<include name="${catfish-common.dir}/ylzh/ResponseState.class"/>
+        	<include name="${catfish-common.dir}/ylzh/ConsumeRegionNative.class"/>
+
+            <manifest>
+                <attribute name="Main-class" value="${mainclass}"/>
+            </manifest>
+        </jar>
+    </target>
+</project>

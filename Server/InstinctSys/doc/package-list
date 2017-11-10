@@ -1,0 +1,17 @@
+com.dectechsolutions.instinct
+core
+instinct.model
+instinct.service.client
+instinct.service.exception
+instinct.service.model
+instinct.service.test
+omni.database
+omni.database.catfish.dao
+omni.database.catfish.object
+omni.database.catfish.object.hybrid
+omni.database.mongo
+omni.model
+omni.model.type
+test
+unittest
+util

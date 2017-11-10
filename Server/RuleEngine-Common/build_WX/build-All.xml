@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="AllModel">    
+    <property name="jarname" value="All-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	
+        	<include name="${model.dir}/*.class"/>
+        	<include name="${model.dir}/adapter/*.class"/>
+        	<include name="${model-in.dir}/*.class"/>
+        	<include name="${model-inout.dir}/*.class"/>
+        	<include name="${model-out.dir}/*.class"/>
+        	<include name="${model-domain.dir}/**/*.class"/>
+        	
+        	<include name="${catfish-base.dir}/Description.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    <include name="${catfish-base.dir}/StartupConfig.class"/>
+    	    
+        	<include name="${catfish-common.dir}/*.class"/>
+        	<include name="${catfish-common.dir}/qhzx/*.class"/>
+        	<include name="${catfish-object.dir}/**/*.class"/>
+        	<!--<include name="${catfish-object.dir}/BaseObject.class"/>
+            <include name="${catfish-object.dir}/MerchantStoreObject.class"/>
+        	<include name="${catfish-object.dir}/InstallmentApplicationObject.class"/>
+        	<include name="${catfish-object.dir}/MerchantStoreRiskControlObject.class"/>
+            <include name="${catfish-object.dir}/context/MerchantStoreData.class"/>-->
+
+        	<zipfileset excludes="META-INF/*.SF" src="${temp.dir}/lib/joda-time-2.5.jar" /> 
+        	
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

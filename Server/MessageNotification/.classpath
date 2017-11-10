@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/log4j/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/dom4j/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-beans-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-core-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-tx-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/bonecp-0.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/guava-14.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/fastjson-1.1.41.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/netty-all-4.0.21.Final.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-api-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-client-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-client-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-common-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-http-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-io-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-server-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-util-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/activation.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/axis.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/javaee.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/JNative.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/json_simple.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/mailapi_1_3_1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/mengwang-client.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mengwang/xmlsec-1.4.2.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/jianzhou/jzsms-6.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/share/Projects/jars/aliyun/aliyun-openservices-1.2.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-asyncclient-4.1/lib/httpmime-4.4.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-asyncclient-4.1/lib/httpclient-4.4.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-asyncclient-4.1/lib/httpclient-cache-4.4.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-asyncclient-4.1/lib/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-asyncclient-4.1/lib/httpcore-nio-4.4.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/joda/joda-time-2.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishframework/GrasscarpServices/GrasscarpServices-models.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/alimemcached/spymemcached-2.8.4.jar"/>	
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GrasscarpServices"/>
+	<classpathentry kind="lib" path="//cfServer01/Share/Projects/jars/aliyun/taobao-sdk-java-auto_1444896319945-20151015.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mongo/mongo-java-driver-2.12.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/com/superapp/wechat-base-api-1.0.0-SNAPSHOT.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MessageLauncher"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

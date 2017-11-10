@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-3.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-runtime-3.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/bcprov-jdk14-1.38.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/drools-all-5.5.0.ht.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/license-1.4.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-api-2.4.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-client-api-2.4.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishframework/CatfishServer.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-client.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-common.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-jetty-http-2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-media-jaxb.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-server.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/aopalliance-repackaged-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/asm-debug-all-5.0.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-api-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-locator-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-utils-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javassist-3.18.1-GA.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.inject-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/jaxb-api-2.2.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/jersey-guava-2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/org.osgi.core-4.2.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/persistence-api-1.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/api/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jackson/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishframework/CatfishServices/CatfishServices.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/httpclient-4.3.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/fluent-hc-4.3.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/httpclient-cache-4.3.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/httpcomponents-client-4.3.5/httpmime-4.3.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar" sourcepath="C:/Users/Alex/.m2/repository/com/google/code/gson/gson/2.2.4/gson-2.2.4-sources.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/csv/javacsv.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-continuation-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-http-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-io-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-server-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-util-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/json/org.json.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/joda/joda-time-2.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-codec-1.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-common-2.4.7.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/RuleEngine-Common"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/jersey-multipart-1.18.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/mimepull-1.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/sqljdbc4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

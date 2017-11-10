@@ -1,0 +1,76 @@
+{
+  "tasks":
+	[{
+	  "name": "PreCheck",
+	  "type": "decision",
+	  "next": ["ReCheck"]
+	},
+	{
+	  "name": "ReCheck",
+	  "type": "decision",
+	  "next": ["OptimizeSplit"]
+	},
+	{
+	  "name": "OptimizeSplit",
+	  "type": "split",
+	  "next":[
+	    "FluentCheck",
+	    "Segmentation"
+	  ]
+	},
+	{
+	  "name": "Segmentation",
+	  "type": "decision",
+	  "next": ["FinalCheck"]
+	},
+	{
+	  "name": "FluentCheck",
+	  "type": "decision",
+	  "next": ["LoanCheck"]
+	},
+	{
+	  "name": "FinalCheck",
+	  "type": "decision",
+      "next": ["OptimizeFinalCheckSplit"]
+	},
+    {
+        "name": "OptimizeFinalCheckSplit",
+	    "type": "split",
+	    "next":[
+            "MonitorSplit",
+            "FraudCheck"
+	    ]
+    },
+    {
+        "name": "FraudCheck",
+	    "type": "mutex",
+	    "next": [LoanCheck]
+    },
+	{
+        "name": "MonitorSplit",
+        "type": "split",
+        "next":[
+            "MonitorMutex",
+            "MonitorCheck"
+        ]
+	},
+	{
+	   "name": "MonitorMutex",
+	   "type": "mutex",
+	   "next": [LoanCheck]
+	},
+	{
+	  "name": "MonitorCheck",
+	  "type": "decision",
+	  "next": ["LoanCheck"]
+	},
+	{
+	  "name": "LoanCheck",
+	  "type": "decision",
+	  "next": ["End"]
+	},
+	{
+	  "name": "End",
+	  "type": "leaf"
+	}]
+}

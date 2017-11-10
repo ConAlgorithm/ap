@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="unittest"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/slf4j/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/slf4j/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-beans-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-core-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-tx-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/itext/itextpdf-5.5.6.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/itext/xmlworker-5.5.6.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/aliyun/oss/aliyun-sdk-oss-2.0.1.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/google/guava-14.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/log4j/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/bonecp-0.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/fastjson-1.1.41.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/netty-all-4.0.21.Final.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-api-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-client-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-client-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-common-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-http-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-io-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-server-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-util-9.2.5.v20141112.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/joda/joda-time-2.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-aop-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-framework-bom-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-jdbc-4.0.5.RELEASE-javadoc.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-common.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-server.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-jetty-http-2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-servlet.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-container-servlet-core.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/api/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/jersey-guava-2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jackson/jackson-all-1.9.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-api-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-locator-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/hk2-utils-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.inject-2.4.0-b10.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/lib/jersey-client.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/ext/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/jetty-continuation-9.2.5.v20141112.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServices"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishframework/CatfishBase/CatfishBase-restful.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/pdfbox-app-2.0.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishapi/CowfishService-model.jar" sourcepath="/CowfishService"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishapi/GrasscarpServices-models.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/catfishapi/fpp-api-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/zhanghj/.m2/repository/com/omniprimeinc/finance/installment/installment-settlement-api/1.1.0/installment-settlement-api-1.1.0.jar" sourcepath="C:/Users/jiaoh/.gradle/caches/modules-2/files-2.1/com.omniprimeinc.finance.installment/installment-settlement-api/1.0.3/6b2821aa35dde0317d51e44054cb08bfe495fa9b/installment-settlement-api-1.0.3-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/bsApi-2.3.7-shaded.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

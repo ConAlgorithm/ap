@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="clean" name="RuleEngine">
+	<property name="src.cl.dir" value="${ruleengine.dir}/src"/>
+	<property name="classes.cl.dir" value="${ruleengine.dir}/bin"/>
+	<property name="temp.cl.dir" value="${ruleengine.dir}/temp/"/>
+	<property name="output.cl.dir" value="${ruleengine.dir}/out"/>
+	<property name="build.cl.dir" value="${ruleengine.dir}/build_CL"/>
+	<property name="mainclass" value=""/>
+
+	<!-- RuleEngine -->
+	<property name="model.dir" value="engine/rule/model"/>
+	<property name="model-in.dir" value="engine/rule/model/in"/>
+	<property name="model-in-cl.dir" value="engine/rule/model/in/cashloan"/>
+	<property name="model-inout.dir" value="engine/rule/model/inout"/>
+	<property name="model-inout-cl.dir" value="engine/rule/model/inout/cashloan"/>
+	<property name="model-out.dir" value="engine/rule/model/out"/>
+	<property name="model-out-cl.dir" value="engine/rule/model/out/cashloan"/>
+	<property name="model-domain.dir" value="engine/rule/domain"/>
+	<property name="model-domain-cl.dir" value="engine/rule/domain/cashloan"/>
+	<property name="model-config.dir" value="engine/rule/config"/>
+	<property name="model-config-cl.dir" value="engine/rule/config/cashloan"/>
+
+	<!-- CatfishBase -->
+	<property name="catfish-base.dir" value="catfish/base"/>
+	<property name="catfish-business.dir" value="catfish/base/business"/>
+	<property name="catfish-common.dir" value="catfish/base/business/common"/>
+	<property name="catfish-object.dir" value="catfish/base/business/object"/>
+
+	<target name="preClean">
+		<delete dir="${temp.cl.dir}" />
+		<delete dir="${output.cl.dir}" />
+		<echo level="info">预清理完毕......</echo>
+	</target>
+
+	<target name="init" depends="preClean">
+		<mkdir dir="${temp.cl.dir}"/>
+		<mkdir dir="${output.cl.dir}"/>
+		<echo level="info">初始化完毕......</echo>
+	</target>
+
+	<target name="copy" depends="init">
+		<copydir src="${catfishBase.class.dir}" dest="${temp.cl.dir}"></copydir>
+		<copydir src="${frameworkBase.class.dir}" dest="${temp.cl.dir}"></copydir>
+		<copydir src="${classes.cl.dir}" dest="${temp.cl.dir}"></copydir>
+		<echo>拷贝完毕......</echo>
+	</target>
+
+	<!--打包jar文件 -->
+	<target name="jar" depends="copy">
+		<ant antfile="${build.cl.dir}/build-CreditReferenceForCL.xml" target="jar"></ant>
+		<echo>打包CreditReferenceForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-InvestigationForCL.xml" target="jar"></ant>
+		<echo>打包InvestigationForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-ThirdPartyDataForCL.xml" target="jar"></ant>
+		<echo>打包ThirdPartyDataForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-InOut-OutForCL.xml" target="jar"></ant>
+		<echo>打包InOut-OutForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-CurrentWhiteListForCL.xml" target="jar"></ant>
+		<echo>打包CurrentWhiteListForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-ConsistencyCheckForCL.xml" target="jar"></ant>
+		<echo>打包ConsistencyCheckForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-CreditCheckForCL.xml" target="jar"></ant>
+		<echo>打包CreditCheckForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-CreditCheckPercentForCL.xml" target="jar"></ant>
+		<echo>打包CreditCheckPercentForCL-model.jar完毕......</echo>
+		<ant antfile="${build.cl.dir}/build-SHZXDataForCL.xml" target="jar"></ant>
+		<echo>打包build-SHZXDataForCL-model.jar完毕......</echo>
+	</target>
+
+	<target name="clean" depends="jar" description="清理目录文件">
+		<delete dir="${temp.cl.dir}" />
+		<echo level="info">清理完毕......</echo>
+	</target>
+</project>

@@ -1,0 +1,11 @@
+.fatjar
+startup.properties
+startup.properties.QA
+startup.properties.staging
+InstinctSys_fat.jar
+/export
+/target/
+/.settings
+.project
+.idea/*
+*.iml

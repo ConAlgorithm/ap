@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="FlowMonitor"> 
+	<property name="project.name" value="FlowMonitor"/>
+	<property name="main.class" value="catfish.monitor.Driver"/>
+	<import file="${framework.lib.dir}/build/shared.xml"/>
+
+	<target name="copy" depends="copy-catfishservices-dep">
+	    <copy todir="${project.temp.dir}" flatten="true">
+	    	<fileset dir="${framework.lib.dir}">
+	    		<include name="FrameworkBase/FrameworkBase.jar"/>
+	    		<include name="CatfishBase/CatfishBase.jar"/>
+                <include name="CatfishServer.jar"/>
+                <include name="CatfishServices/CatfishServices.jar"/>
+	    	</fileset>
+	    </copy>
+	    <echo level="info">copy ${project.name} dependence......</echo>
+	</target>
+	  
+    <target name="compile" depends="copy,compile-project"> 
+    </target>
+	
+	<!--<target name="copy-config" depends="compile">
+		<copy todir="${output.dir}/${project.name}">
+			<fileset dir="${project.name}">
+				<include name="config/*.js"/>
+            </fileset>
+		</copy>
+	</target> -->
+
+    <target name="jar" depends="compile,jar-project-with-lib" description="jar target">
+    </target>
+</project>  

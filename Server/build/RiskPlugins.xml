@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="RiskPlugins"> 
+    
+	<property name="project.name" value="RiskPlugins"/>
+	<property name="main.class" value="risk.plugins.Driver"/>
+	<import file="${framework.lib.dir}/build/shared.xml"/>
+	
+	<target name="copy" depends="copy-catfishservices-dep">
+	    <copy todir="${project.temp.dir}" flatten="true">
+			<fileset dir="${lib.dir}">
+		   		<include name="itext/itextpdf-5.5.6.jar"/>
+		   		<include name="itext/xmlworker-5.5.6.jar"/>
+	        </fileset>
+	    	<fileset dir="${framework.lib.dir}">
+                <include name="FrameworkBase/FrameworkBase.jar"/>
+				<include name="CatfishBase/CatfishBase.jar"/>
+                <include name="CatfishServer.jar"/>
+                <include name="CatfishServices/CatfishServices.jar"/>
+            </fileset>
+	    </copy>
+	    <echo level="info">拷贝${project.name}依赖包完毕......</echo>
+	</target>
+	  
+    <!--编译 -->  
+    <target name="compile" depends="copy"> 
+        <javac fork="yes" executable="${java8.compiler}" target="1.8" srcdir="${project.src.dir}" destdir="${project.classes.dir}" sourcepath = "" includeantruntime="true">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        </javac>  
+    	<echo>编译${project.name}成功......</echo>
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="compile,jar-project-with-lib" description="jar taget">
+    </target>
+	
+</project>  

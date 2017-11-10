@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="FraudCheckModel">    
+    <property name="jarname" value="FraudCheckForApp-model.jar"/>  
+	
+    <target name="jar">   
+        <!-- jar文件的输出路径 --> 
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in-app.dir}/FraudCheckInForm.class"/>
+    	    
+          <include name="${model-domain.dir}/MerchantUserRole.class"/>
+          <include name="${model-domain.dir}/MerchantUserActionType.class"/>
+          <include name="${model-domain.dir}/InstinctCheckResultType.class"/>  
+          <include name="${model-domain.dir}/WXHeadPhotoCheckResult.class"/>  
+        	
+    	    <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>
+    	        	    
+    	    <include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    
+    	    <include name="${catfish-common.dir}/CatfishEnum.class"/>
+    	    
+          <include name="${catfish-common.dir}/MerchantUserRole.class"/>
+          <include name="${catfish-common.dir}/MerchantUserActionType.class"/>
+          <include name="${catfish-common.dir}/instinct/InstinctCheckResultType.class"/>
+          <include name="${catfish-common.dir}/fraud/WXHeadPhotoCheckResult.class"/>
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

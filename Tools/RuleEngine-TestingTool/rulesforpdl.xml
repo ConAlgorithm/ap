@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleConfig>
+	<!-- 时间格式 -->
+	<DateFormat>MM-dd-yyyy HH:mm:ss</DateFormat>
+	<!-- 尝试执行规则次数 -->
+	<RetryRuleCount>3</RetryRuleCount>
+	
+    <!-- 预审批 -->
+	<PreCheck identity="precheck">
+		  <projectName>PDL_Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>PRECHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</PreCheck>
+	<!-- 冷冻 -->
+	<PreCheck identity="antifraudcheck">
+		  <projectName>PDL_Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>ANTIFRAUDCHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</PreCheck>
+	<!-- 图片必要性检查 -->
+    <PhotoCheck identity="photocheck">
+          <projectName>PDL_Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>PHOTOCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </PhotoCheck>
+    
+    <!-- Recheck -->
+	<ReCheck identity="recheck">
+		  <projectName>PDL_Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>RECHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</ReCheck>
+	
+    <!-- Segmentation -->
+	<Segmentation identity="segmentation">
+		  <projectName>PDL_Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>SEGMENTATION</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</Segmentation>
+	
+    <!-- FINALCHECK -->
+	<FinalCheck identity="finalcheck">
+		  <projectName>PDL_Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>FINALCHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</FinalCheck>
+		
+	<!-- MONITORCHECK -->
+    <MonitorCheck identity="monitorcheck">
+          <projectName>PDL_Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>MONITORCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </MonitorCheck>
+		
+	<!-- ANTIFRAUDCHECK -->
+    <AntiFraudCheck identity="antifraudcheck">
+          <projectName>PDL_Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>ANTIFRAUD</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </AntiFraudCheck>
+</RuleConfig>

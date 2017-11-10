@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleConfig>
+	<!-- 时间格式 -->
+	<DateFormat>MM-dd-yyyy HH:mm:ss</DateFormat>
+	<!-- 尝试执行规则次数 -->
+	<RetryRuleCount>3</RetryRuleCount>
+	
+	<!-- 测试规则 -->
+	<TestRule identity="testrule">
+	      <!-- 执行工程名称 -->
+		  <projectName>UAT_for_testing</projectName>
+		  <!-- 执行的基线版本, 默认null为最新的基线版本 -->
+		  <baselineVersion></baselineVersion>
+		  <!-- 执行的规则集名称，默认null为最新规则集 -->
+		  <ruleSetName></ruleSetName>
+		  <!-- 执行的规则集版本，默认null为最新规则集版本 -->
+		  <ruleSetVersion></ruleSetVersion>
+		  <!-- 是否记录命中信息 -->
+		  <recordHitFlag>true</recordHitFlag>
+		  <!-- 是否记录规则流执行信息 -->
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</TestRule>
+
+    <!-- 预审批 -->
+	<PreCheck identity="precheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>PRECHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</PreCheck>
+	
+	<!-- 图片必要性检查 -->
+    <PhotoCheck identity="photocheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>PHOTOCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </PhotoCheck>
+    
+    <SigningCheck identity="signingcheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>SIGNINGCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </SigningCheck>
+    
+    <!-- Instinct Pre Check -->
+    <BlackCheck identity="blackcheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>BLACKCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </BlackCheck>
+    
+    <!-- Recheck -->
+	<ReCheck identity="recheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>RECHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</ReCheck>
+	
+	<!-- FluentCheck -->
+	<FluentCheck identity="fluentcheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>FLUENTCHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</FluentCheck>
+	
+    <!-- Segmentation -->
+	<Segmentation identity="segmentation">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>SEGMENTATION</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</Segmentation>
+	
+    <!-- FINALCHECK -->
+	<FinalCheck identity="finalcheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>FINALCHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</FinalCheck>
+	
+	<!-- 放款必要文件检查 -->
+    <ApprovalEvidenceRequirementCheck identity="approvalEvidenceRequirementCheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>CHECKIFNEEDIOUBUCKLE</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </ApprovalEvidenceRequirementCheck>
+    
+    <!-- Instinct Final Check -->
+    <FraudCheck identity="fraudcheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>FRAUDCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </FraudCheck>
+    
+    <!-- MONITORCHECK -->
+    <MonitorCheck identity="monitorcheck">
+          <projectName>MDXUderwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>MONITORCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </MonitorCheck>
+    
+    <!-- LOANCHECK -->
+	<LoanCheck identity="loancheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>LOANCHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</LoanCheck>
+	
+    <!-- DownpaymentCheck -->
+	<DownpaymentCheck identity="downpaymentcheck">
+		  <projectName>MDXUderwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>DOWNPAYMENT</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</DownpaymentCheck>
+
+</RuleConfig>

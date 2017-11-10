@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="clean" name="RuleEngine">   
+    <property name="jodalib.dir" value="\\cfserver01\Share\Projects\jars\joda"/>  
+    <property name="src.dir" value="../src"/>  
+    <property name="classes.dir" value="../bin"/>  
+	<property name="temp.dir" value="../temp"/> 
+    <property name="output.dir" value="../out"/>
+    <property name="mainclass" value=""/>  
+  
+	<!-- RuleEngine -->
+	<property name="engine.dir" value="engine"/>
+	<property name="model.dir" value="engine/rule/model"/>
+	<property name="model-in.dir" value="engine/rule/model/in"/>  
+	<property name="model-in-app.dir" value="engine/rule/model/in/app"/>
+	<property name="model-inout.dir" value="engine/rule/model/inout"/>
+	<property name="model-inout-app.dir" value="engine/rule/model/inout/app"/>
+	<property name="model-out.dir" value="engine/rule/model/out"/>
+	<property name="model-out-app.dir" value="engine/rule/model/out/app"/>
+	<property name="model-domain.dir" value="engine/rule/domain"/>
+	<property name="model-domain-app.dir" value="engine/rule/domain/app"/>
+	<property name="model-config-app.dir" value="engine/rule/config/app"/> 
+	
+	<!-- CatfishBase -->
+	<property name="catfish.dir" value="G:\workspace\framework\CatfishBase\bin"/>
+	<property name="framework.dir" value="G:\workspace\framework\FrameworkBase\bin"/>
+	<property name="catfish-base.dir" value="catfish/base"/>
+	<property name="catfish-business.dir" value="catfish/base/business"/>
+	<property name="catfish-common.dir" value="catfish/base/business/common"/>
+	<property name="catfish-object.dir" value="catfish/base/business/object"/>
+	
+    <!-- 第三方jar包的路径 -->  
+    <!--<path id="lib-classpath">  
+        <fileset dir="${lib.dir}">  
+            <include name="**/*.jar"/>  
+        </fileset>  
+    </path> -->
+  
+	<target name="preClean">  
+		<delete dir="${temp.dir}" />
+		<delete dir="${output.dir}" />
+    	<echo level="info">预清理完毕......</echo>
+	</target>
+	
+    <target name="init" depends="preClean">  
+        <mkdir dir="${temp.dir}"/>  
+        <mkdir dir="${output.dir}"/> 
+    	<echo level="info">初始化完毕......</echo>
+    </target>  
+	
+	<target name="copy" depends="init">
+	    <copydir src="${catfish.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${framework.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${classes.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${jodalib.dir}" dest="${temp.dir}\lib"></copydir>
+		<echo>拷贝完毕......</echo>
+	</target>
+	
+    <!--编译 -->  
+    <!--<target name="compile" depends="init">  
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        
+			    <include name="engine/rule/model/in/StoreInfoInForm.java"/>
+        </javac>  
+    	<echo level="info">编译完毕......</echo>
+    </target>-->
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="copy">       
+    	<ant antfile="build-ApplicationForApp.xml" target="jar"></ant>
+    	<echo>打包ApplicationForApp-model.jar完毕......</echo>
+    	<ant antfile="build-BehaviorForApp.xml" target="jar"></ant>
+    	<echo>打包BehaviorForApp-model.jar完毕......</echo>
+    	<ant antfile="build-ConsistencyCheckForApp.xml" target="jar"></ant>
+    	<echo>打包ConsistencyCheckForApp-model.jar完毕......</echo>
+    	<ant antfile="build-CreditReferenceForApp.xml" target="jar"></ant>
+    	<echo>打包CreditReferenceForApp-model.jar完毕......</echo>
+    	<ant antfile="build-FraudCheckForApp.xml" target="jar"></ant>
+    	<echo>打包FraudCheckForApp-model.jar完毕......</echo>
+    	<ant antfile="build-InvestigationForApp.xml" target="jar"></ant>
+    	<echo>打包InvestigationForApp-model.jar完毕......</echo>
+    	<ant antfile="build-PersonalInfoForApp.xml" target="jar"></ant>
+    	<echo>打包PersonalInfoForApp-model.jar完毕......</echo>
+    	<ant antfile="build-SocialRelationForApp.xml" target="jar"></ant>
+    	<echo>打包SocialRelationForApp-model.jar完毕......</echo>
+        <ant antfile="build-StoreInfoForApp.xml" target="jar"></ant>
+    	<echo>打包StoreInfoForApp-model.jar完毕......</echo>
+    	<ant antfile="build-DynamicApplicationForApp.xml" target="jar"></ant>
+    	<echo>打包DynamicApplicationForApp-model.jar完毕......</echo>
+    	<ant antfile="build-ThirdPartyDataForApp.xml" target="jar"></ant>
+    	<echo>打包ThirdPartyDataForApp-model.jar完毕......</echo>
+    	<ant antfile="build-InOut-OutForApp.xml" target="jar"></ant>
+    	<echo>打包InOut-OutForApp-model.jar完毕......</echo>
+    	<ant antfile="build-SHZXDataForApp.xml" target="jar"></ant>
+    	<echo>打包SHZXDataForApp-model.jar完毕......</echo>
+    </target>  
+	
+	<target name="clean" depends="jar" description="清理目录文件">
+		<delete dir="${temp.dir}" />
+        <echo level="info">清理完毕......</echo>
+	</target>
+</project>  

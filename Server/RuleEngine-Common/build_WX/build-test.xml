@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="TestModel">    
+    <property name="jarname" value="Test-model.jar"/>  
+	
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+        	<include name="${model.dir}/BaseForm.class"/>
+    	    <include name="${model-in.dir}/TestInForm.class"/>
+      	
+        	<include name="${model-domain.dir}/jxl/CheckPointResult.class"/>
+        	    	         	
+        	<include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>       	    	    
+        	<include name="${model.dir}/adapter/DBFieldAdapter.class"/>
+        	
+        	<include name="${catfish-base.dir}/Description.class"/>
+        	<include name="${catfish-base.dir}/Hidden.class"/>
+    	    <include name="${catfish-base.dir}/DescriptionParser.class"/>
+    	    
+    	    <include name="${catfish-common.dir}/jxl/CheckPointResult.class"/>
+        	
+        	<include name="${catfish-common.dir}/CatfishEnum.class"/>
+        	
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

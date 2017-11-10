@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleConfig>
+	<!-- 时间格式 -->
+	<DateFormat>MM-dd-yyyy HH:mm:ss</DateFormat>
+	<!-- 尝试执行规则次数 -->
+	<RetryRuleCount>3</RetryRuleCount>
+	
+	<!-- 测试规则 -->
+	<TestRule identity="testrule">
+	      <!-- 执行工程名称 -->
+		  <projectName>Test_for_Staging</projectName>
+		  <!-- 执行的基线版本, 默认null为最新的基线版本 -->
+		  <baselineVersion></baselineVersion>
+		  <!-- 执行的规则集名称，默认null为最新规则集 -->
+		  <ruleSetName>Test</ruleSetName>
+		  <!-- 执行的规则集版本，默认null为最新规则集版本 -->
+		  <ruleSetVersion></ruleSetVersion>
+		  <!-- 是否记录命中信息 -->
+		  <recordHitFlag>true</recordHitFlag>
+		  <!-- 是否记录规则流执行信息 -->
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</TestRule>
+	
+	<!-- 动态问卷 -->
+	<DynamicQuestionnaire identity="dynamicquestionnaire">
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>QUESTIONNAIRE</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</DynamicQuestionnaire>
+		
+	<!-- 门店评级 -->
+	<MerchantRating identity="merchantrating">
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>STORELEVEL</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</MerchantRating>
+	
+	<!-- 身份证姓名一致性检查 -->
+	<CheckNameIDCardMatch identity="checknameidmatch">
+          <projectName>Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>IDCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </CheckNameIDCardMatch>
+
+    <!-- 图片分拣检查 -->
+    <PhotoCheck identity="photocheck">
+          <projectName>Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>PHOTOCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </PhotoCheck>
+
+    <!-- 预审批 -->
+	<PreCheck identity="precheck">
+		  <projectName>Underwriting</projectName>
+		  <baselineVersion></baselineVersion>
+		  <ruleSetName>PRECHECK</ruleSetName>
+		  <ruleSetVersion></ruleSetVersion>
+		  <recordHitFlag>true</recordHitFlag>
+		  <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</PreCheck>
+	
+	<!-- 初审批 -->
+	<FirstCheck identity="firstcheck">
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>FIRSTCHECK</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</FirstCheck>
+	
+	<!-- 二次审批 -->
+	<ReCheck identity="recheck">
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>RECHECK</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</ReCheck>
+	
+	<!-- 自动放款审批 -->
+	<CheckWholeProcess identity="checkwholeprocess">
+	      <!-- <projectName>Underwriting</projectName> -->
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>FINALCHECK</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</CheckWholeProcess>
+	
+	<!-- 电子借条审批 -->
+    <IOUCheck identity="ioucheck">
+          <projectName>Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>IOUCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </IOUCheck>
+	
+	<!-- 电子借条代扣协议必要性审批 -->
+    <PostApprovalEvidenceRequirementCheck identity="postapprovalevidencerequirementcheck">
+          <projectName>Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>POSTAPPROVALEVIDENCEREQUIREMENTCHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </PostApprovalEvidenceRequirementCheck>
+    
+    <!-- 电子借条代扣协议审批 -->
+    <PostApprovalEvidenceCheck identity="postapprovalevidencecheck">
+          <projectName>Underwriting</projectName>
+          <baselineVersion></baselineVersion>
+          <ruleSetName>POSTAPPROVALEVIDENCECHECK</ruleSetName>
+          <ruleSetVersion></ruleSetVersion>
+          <recordHitFlag>true</recordHitFlag>
+          <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+    </PostApprovalEvidenceCheck>
+	
+	<!-- 商户确认放款审批 -->
+	<LoanCheck identity="loancheck">
+	      <projectName>Underwriting</projectName>
+	      <baselineVersion></baselineVersion>
+	      <ruleSetName>LOANCHECK</ruleSetName>
+	      <ruleSetVersion></ruleSetVersion>
+	      <recordHitFlag>true</recordHitFlag>
+	      <saveRuleFlowInfoFlag>false</saveRuleFlowInfoFlag>
+	</LoanCheck>
+	
+</RuleConfig>

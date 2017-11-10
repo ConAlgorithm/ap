@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="clean" name="RuleEngine">   
+    <property name="jodalib.dir" value="\\cfserver01\Share\Projects\jars\joda"/>  
+    <property name="src.dir" value="../src"/>  
+    <property name="classes.dir" value="../bin"/>  
+	<property name="temp.dir" value="../temp"/> 
+    <property name="output.dir" value="../out"/>
+    <property name="mainclass" value=""/>  
+  
+	<!-- RuleEngine -->
+	<property name="model.dir" value="engine/rule/model"/>
+	<property name="model-in.dir" value="engine/rule/model/in"/>  
+    <property name="model-in-app.dir" value="engine/rule/model/in/app"/>
+	<property name="model-in-pdl.dir" value="engine/rule/model/in/pdl"/>
+	<property name="model-inout.dir" value="engine/rule/model/inout"/>
+    <property name="model-inout-app.dir" value="engine/rule/model/inout/app"/>
+	<property name="model-inout-pdl.dir" value="engine/rule/model/inout/pdl"/>
+	<property name="model-out.dir" value="engine/rule/model/out"/>
+    <property name="model-out-app.dir" value="engine/rule/model/out/app"/>
+	<property name="model-out-pdl.dir" value="engine/rule/model/out/pdl"/>
+	<property name="model-domain.dir" value="engine/rule/domain"/>
+    <property name="model-config.dir" value="engine/rule/config"/>
+    <property name="model-domain-app.dir" value="engine/rule/domain/app"/>
+	<property name="model-domain-pdl.dir" value="engine/rule/domain/pdl"/>
+    <property name="model-config-app.dir" value="engine/rule/config/app"/> 
+	<property name="model-config-pdl.dir" value="engine/rule/config/pdl"/> 
+	
+	<!-- CatfishBase -->
+	<property name="catfish.dir" value="D:\framework\CatfishBase\bin"/>
+	<property name="framework.dir" value="D:\framework\FrameworkBase\bin"/>
+	<property name="catfish-base.dir" value="catfish/base"/>
+	<property name="catfish-business.dir" value="catfish/base/business"/>
+	<property name="catfish-common.dir" value="catfish/base/business/common"/>
+	<property name="catfish-object.dir" value="catfish/base/business/object"/>
+	
+    <!-- 第三方jar包的路径 -->  
+    <!--<path id="lib-classpath">  
+        <fileset dir="${lib.dir}">  
+            <include name="**/*.jar"/>  
+        </fileset>  
+    </path> -->
+  
+	<target name="preClean">  
+		<delete dir="${temp.dir}" />
+		<delete dir="${output.dir}" />
+    	<echo level="info">预清理完毕......</echo>
+	</target>
+	
+    <target name="init" depends="preClean">  
+        <mkdir dir="${temp.dir}"/>  
+        <mkdir dir="${output.dir}"/> 
+    	<echo level="info">初始化完毕......</echo>
+    </target>  
+	
+	<target name="copy" depends="init">
+	    <copydir src="${catfish.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${framework.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${classes.dir}" dest="${temp.dir}"></copydir>
+		<copydir src="${jodalib.dir}" dest="${temp.dir}\lib"></copydir>
+		<echo>拷贝完毕......</echo>
+	</target>
+	
+    <!--编译 -->  
+    <!--<target name="compile" depends="init">  
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        
+			    <include name="engine/rule/model/in/StoreInfoInForm.java"/>
+        </javac>  
+    	<echo level="info">编译完毕......</echo>
+    </target>-->
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="copy">       
+    	<ant antfile="build-ApplicationForPDL.xml" target="jar"></ant>
+    	<echo>打包ApplicationForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-BehaviorForPDL.xml" target="jar"></ant>
+    	<echo>打包BehaviorForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-ConsistencyCheckForPDL.xml" target="jar"></ant>
+    	<echo>打包ConsistencyCheckForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-CreditReferenceForPDL.xml" target="jar"></ant>
+    	<echo>打包CreditReferenceForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-FraudCheckForPDL.xml" target="jar"></ant>
+    	<echo>打包FraudCheckForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-InvestigationForPDL.xml" target="jar"></ant>
+    	<echo>打包InvestigationForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-PersonalInfoForPDL.xml" target="jar"></ant>
+    	<echo>打包PersonalInfoForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-SocialRelationForPDL.xml" target="jar"></ant>
+    	<echo>打包SocialRelationForPDL-model.jar完毕......</echo>
+        <ant antfile="build-StoreInfoForPDL.xml" target="jar"></ant>
+    	<echo>打包StoreInfoForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-DynamicApplicationForPDL.xml" target="jar"></ant>
+    	<echo>打包DynamicApplicationForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-ThirdPartyDataForPDL.xml" target="jar"></ant>
+    	<echo>打包ThirdPartyDataForPDL-model.jar完毕......</echo>
+    	<ant antfile="build-InOut-OutForPDL.xml" target="jar"></ant>
+    	<echo>打包InOut-OutForPDL-model.jar完毕......</echo>
+        <ant antfile="build-FInfoForPDL.xml" target="jar"></ant>
+        <echo>打包FInfoForPDL-model.jar完毕......</echo>
+        <ant antfile="build-HistoricalPerformanceForPDL.xml" target="jar"></ant>
+        <echo>打包HistoricalPerformanceForPDL-model.jar完毕......</echo>
+        <ant antfile="build-Out-LoanMoneyForPDL.xml" target="jar"></ant>
+        <echo>打包LoanMoneyOutForPDL-model.jar完毕......</echo>
+    </target>  
+	
+	<target name="clean" depends="jar" description="清理目录文件">
+		<delete dir="${temp.dir}" />
+        <echo level="info">清理完毕......</echo>
+	</target>
+</project>  

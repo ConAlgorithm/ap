@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="InvestigationModel">    
+    <property name="jarname" value="InvestigationForPDL-model.jar"/>  
+    
+    <target name="jar">    
+        <!-- jar文件的输出路径 -->  
+        <jar destfile="${output.dir}/${jarname}" basedir="${temp.dir}">  
+            <include name="${model.dir}/BaseForm.class"/>
+            <include name="${model-in-pdl.dir}/AdditionalContactRiskForm.class"/>
+            <include name="${model-in-pdl.dir}/InvestigationInForm.class"/>
+            
+            <include name="${model-domain.dir}/CheckBuckleDoesSignatureAndIdNameMatchForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckBuckleIsBuckleAgreementForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckBuckleSignatureClarifyResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckBuckleTextClarifyResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckCourtExecutedForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckCreditEaseRecordForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckDafyRecordForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckElectronicNoticePhoneColorForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckElectronicNoticeRingFingerForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactAttitudeOfPhoneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactCareApplicantResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactCompanyNameResultPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactIdentificationResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactMarriageStatusResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactRiskPromptResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactSceneIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactSoundForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckFirstContactZodiacResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckHaodaiRecordForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckHomeCreditRecordForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageComparisionForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageHeadPhotoFaceExpressionForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageHeadPhotoHeadDirectionForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageHeadPhotoPersonalPicForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageIdCardInfoForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImageIdCardPersonalPicForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckImagePhotoFromPoliceExistForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckIsSalesmanExistedForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactAttitudeOfPhoneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactCareApplicantResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactCompanyNameResultPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactIdentificationResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactMarriageStatusResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactRiskPromptResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactSceneIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactSoundForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckSecondContactZodiacResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactAttitudeOfPhoneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactCareApplicantResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactCompanyNameResultPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactIdentificationResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactMarriageStatusResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactRiskPromptResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactSceneIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactSoundForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckThirdContactZodiacResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserCarenessLevelForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserCompanyNameForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserCompanyPaydayForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserConsequenceIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserDislikeLevelForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserIDCardAddressForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserIdentificationForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserRiskRevealForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserSceneIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserSoundForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckUserSymbolicAnimalForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckVCashRecordForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherBankCardInfoIsRecognizableForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherBankCardPhotoIsRecognizableForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherCompanyNameAndDepartmentIsConsistentForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherCustomerPhotoIsTheSamePersonForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherGroupPhotoIsRecognizableForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherImageIsBankCardForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherImageIsConsistentWithTemplateWorkPermitForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherImageIsGroupPhotoForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherImageIsIdCardPhotoForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherImageIsWorkPermitForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherSalesmanPhotoIsTheSamePersonForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherWorkPermitConsistentForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherWorkPermitFourDigitCaptchaConsistentForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherWorkPermitFourDigitCaptchaExistsForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherWorkPermitNameIsConsistentWithIDCardNameForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/CheckWhetherWorkPermitOfficialSealConsistentForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/ElectronicNoticetwoPhotosComparisonForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/FinishApplicationOperationForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/FirstRepaymentRemindSceneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/InputIdCardInfoIsOtherCertProvidedForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/InputIdCardInfoOtherCertTypeForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeCustomerHasSmileForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeDistinguishableForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeFourVerificationCodeConsistentForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeFourVerificationCodeExistForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/IsElectronicNoticeInformationDistinguishableForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/LoanMoneyFailureReasonPDLForPDL.class"/>
+            <include name="${model-domain.dir}/LoanMoneyResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindAttitudeOfPhoneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindCareApplicantResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindCertificateResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindIdentificationForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/OverdueRepaymentRemindSceneIntroduceResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/RepaymentRemindCustomerAttitudeResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/RepaymentRemindIdentificationResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/RepaymentRemindPaybackConfirmationForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/RepaymentRemindPhoneCallResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/SecondRepaymentRemindSceneResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/TransactionMonitorRejectReasonForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/TransactionMonitorResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/WelcomeCallCustomerAttitudeResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/WelcomeCallPaybackInfoConfirmationForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/WelcomeCallPhoneAnswererResultForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/WelcomeCallPhoneStatusForPDLForPDL.class"/>
+            <include name="${model-domain.dir}/WelcomeCallSceneFeedbackForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeHasClientNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeHasCompanyNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeHasJobNumberForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeHasJobTitleForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeOnBreastForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherBadgeRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherClientInWorkClothForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateExaminationNumberForPDForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateExaminationResultForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateExaminationTimeForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateHasAgeForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateHasClientNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateHasGenderForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateHasHeadShotForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateIDNumberForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherHealthCertificateRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageHasBankCardTheLastFourNoForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageHasBankNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageHasDateForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageHasSalaryAmountForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageHasSenderInfoForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSalaryMessageRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasClientNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasGenderForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasHasBankCardNoForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasHasIssuingDateForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasHasNationForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasHasValidDateForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardHasHeadShotForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardIDNumberForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherSocialSecurityCardRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardHasClientNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardHasCompanySealForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardHasRecordForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardJobNumberForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherTimeCardTheLatestDateForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkClothFitWithClientJobForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkClothRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasClientNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasCompanyNameForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasDepartmentForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasHeadShotForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasJobNumberForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseHasJobTitleForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/CheckWhetherWorkPermitOrLicenseRecognizableForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsBadgeForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsHealthCertificateForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsSalaryMessageForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsSocialSecurityCardForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsTimeCardForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsWorkClothForPDLForPDL.class"/>
+        	<include name="${model-domain.dir}/IsWorkPermitOrLicenseForPDLForPDL.class"/>
+            
+            <!--手动添加字段-->           
+            <include name="${model-domain.dir}/adapter/FixedDomainFieldsAdapter.class"/>                     
+            <include name="${model-domain.dir}/adapter/EnumDomainAdapter.class"/>   
+            
+            <include name="${catfish-base.dir}/Description.class"/>
+            <include name="${catfish-base.dir}/Hidden.class"/>
+            <include name="${catfish-base.dir}/DescriptionParser.class"/>
+            <include name="${catfish-base.dir}/StartupConfig.class"/>
+            
+            <!--<include name="${catfish-common.dir}/*.class"/>-->
+            
+            <include name="${catfish-common.dir}/CatfishEnum.class"/>
+        <!--    
+            <include name="${catfish-common.dir}/PhoneCallResult.class"/>
+            <include name="${catfish-common.dir}/CheckUserRiskRevealResult.class"/>
+            <include name="${catfish-common.dir}/CheckUserSoundResult.class"/>
+            <include name="${catfish-common.dir}/CheckUserAnswerWithReminderResult.class"/>
+            
+            <include name="${catfish-common.dir}/CheckContactRiskRevealResult.class"/>
+            <include name="${catfish-common.dir}/CheckContactSoundResult.class"/>
+            <include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+
+            <include name="${catfish-common.dir}/CheckCompanyRiskRevealResult.class"/>
+            <include name="${catfish-common.dir}/CheckCompanyAnswerPersonResult.class"/>
+            <include name="${catfish-common.dir}/CheckContactAnswerWithReminderResult.class"/>
+        -->
+            <manifest>  
+                <attribute name="Main-class" value="${mainclass}"/>   
+            </manifest>  
+        </jar>  
+    </target>  
+</project>  

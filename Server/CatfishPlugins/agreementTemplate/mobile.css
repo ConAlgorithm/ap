@@ -1,0 +1,644 @@
+
+ul {
+    list-style-type: none;
+}
+
+
+li {
+    line-height: 30px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.hint {
+    color: red;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 0.8em;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.repayment-schedule-table {
+    border: 1px solid gray;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+}
+
+    .repayment-schedule-table th {
+        border: 1px solid gray;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+.head-container {
+    color: white;
+    background-color: orange;
+    padding-bottom: 1em;
+}
+
+.account-time {
+    font-size: 12px;
+}
+
+.tr-withdraw {
+    padding-bottom: 10%;
+}
+
+.tr-merchant-store {
+    padding-bottom: 10%;
+}
+
+.account-block {
+    text-align: center;
+    padding: 5%;
+    text-shadow: 0 0 0 white;
+}
+
+.withdraw-block {
+    padding-top: 5%;
+}
+
+.withdraw-block a {
+    text-decoration: none;
+}
+
+.account-name {
+    white-space: nowrap;
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.td-name {
+    width: 55%;
+    position: relative;
+    padding: 7px 10px;
+}
+
+.td-merchant-store-name {
+    width: 85%;
+    position: relative;
+    padding: 7px 10px;
+}
+
+.td-merchant-store-amount {
+    width: 15%;
+    padding: 14px 5px;
+}
+
+.td-status {
+    width: 25%;
+    text-align: right;
+    padding: 0px;
+}
+
+.withdraw-amount {
+    margin-top: 12px;
+}
+
+
+
+.td-withdraw-time {
+    width: 40%;
+    font-size: 12px;
+    padding: 14px 5px;
+}
+
+.td-withdraw-status {
+    width: 30%;
+}
+
+.td-withdraw-amount {
+    width: 30%;
+    padding: 14px 10px;
+}
+
+.td-amount {
+    width: 20%;
+    text-align: right;
+    padding: 7px 10px;
+}
+
+#account-title {
+    font-size: 14px;
+clear:both;
+float:left;
+
+}
+.withdraw-block{
+    float:right;
+
+    margin-top: 1%;
+}
+#account-value {
+    margin-top: 2%;
+    font-size: 24px;
+    font-weight: bold;
+float:left;
+}
+
+.repayment-schedule-table td {
+    border: 1px solid gray;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.payback-detail-table {
+    border: 1px solid gray;
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 14px;
+    width: 100%;
+}
+
+    .payback-detail-table th {
+        border: 1px solid gray;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+    .payback-detail-table td {
+        border: 1px solid gray;
+        text-align: left;
+        border-collapse: collapse;
+    }
+
+.instalment {
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+.ui-mobile label.highlight-label {
+    font-size: 1.5em;
+    color: #ff6a00;
+}
+
+.clear {
+    clear: both;
+}
+
+.hidden {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    float: left;
+}
+
+.none {
+    display: none;
+}
+
+.table-hint {
+    float: right;
+    margin-right: 4%;
+}
+
+table.license-table, table.license-application-form {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+table.license-application-form {
+    border: 1px solid #000;
+}
+
+table.license-table td {
+    padding: 3px 6px;
+    width: 30%;
+}
+
+    table.license-table td .fullname {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    table.license-table td .license-label {
+        color: #999;
+    }
+
+table.license-application-form td {
+    padding: 3px 6px;
+    width: 50%;
+}
+
+.license {
+    white-space: pre-wrap; /* css-3 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.license-value {
+    font-weight: bold;
+}
+
+.license-user-head {
+    width: 100%;
+}
+
+.license-sub-title {
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 0 0 0;
+    font-size: 1.1em;
+}
+
+#form_agreement label {
+    font-size: 0.9em;
+}
+
+label.error {
+    color: red;
+    padding-bottom: .5em;
+    vertical-align: top;
+    font-size: 0.9em;
+}
+
+fieldset#repayments_group .ui-controlgroup-controls {
+    width: 100%;
+}
+
+fieldset#repayments_group .ui-radio {
+    width: 25%;
+}
+
+fieldset#repayments_group label {
+    text-align: center;
+}
+
+.buttongroup2 .ui-controlgroup-controls {
+    width: 100%;
+}
+
+    .buttongroup2 .ui-controlgroup-controls a {
+    }
+
+#monthly_pay {
+    float: left;
+}
+
+#notes {
+    float: right;
+    color: #808080;
+    padding-top: .5em;
+    font-weight: bold;
+}
+
+.step-done {
+    width: 20px;
+    background-color: #4cff00;
+}
+
+.step-current {
+    width: 20px;
+    background-color: #ffd800;
+}
+
+.read-hint {
+    color: red;
+    float: right;
+}
+
+.step-remain {
+    width: 20px;
+    background-color: #808080;
+}
+
+.agreement-ui-content {
+    padding: 15px;
+}
+
+#agreement_text {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ui-btn.ui-btn-b {
+    background-color: #8ecb64 !important;
+    border-color: #7eb459 !important;
+    text-shadow: none !important;
+}
+
+    .ui-btn.ui-btn-b:active {
+        margin-top: .7em;
+        background-color: #4e8b24 !important;
+        border-color: #3e8b24 !important;
+    }
+
+#plan .ui-slider-track.ui-mini .ui-slider-handle {
+    height: 30px !important;
+    width: 30px !important;
+    margin: -16px 0 0 -16px !important;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+#form_plan .ui-slider-track .ui-btn-active {
+    background-color: #728198;
+}
+
+.ui-slider-track.ui-mini {
+    height: 8px;
+}
+
+
+
+.loanForm-readout {
+    float: none;
+    width: 100%;
+}
+
+    .loanForm-readout:before, .loanForm-readout:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+
+    .loanForm-readout:after {
+        clear: both;
+    }
+
+    .loanForm-readout ul {
+        background: #FFF;
+        padding: 0 10px;
+        margin: 10px 0;
+        -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .loanForm-readout li:first-child, .loanForm-readout li:nth-child(3) {
+        border-top: 0;
+    }
+
+    .loanForm-readout li {
+        border-top: 1px dashed #ccc;
+        padding-bottom: 6px;
+        padding-top: 11px;
+        margin-bottom: 0!important;
+        position: relative;
+    }
+
+        .loanForm-readout li:before, .loanForm-readout li:after {
+            display: table;
+            content: "";
+            line-height: 0;
+        }
+
+        .loanForm-readout li:after {
+            clear: both;
+        }
+
+.loanForm-borrowBox .loanForm-label {
+}
+
+.loanForm-label, .loanForm-readout .v-number {
+    font-family: "museo-sans","museo-sans-1","museo-sans-2","Museo Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+    display: inline-block;
+    width: 42%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.loanForm-months {
+    font-family: "museo-sans","museo-sans-1","museo-sans-2","Museo Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 0.6em;
+    line-height: 24px;
+    float: left;
+    display: inline-block;
+    width: 16%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+.loanForm-readout .v-number {
+    font-size: 1.5em;
+}
+
+.loanForm-readout .loanForm-monthlyPay, .value-monthly-pay {
+    color: #ff6a00;
+}
+
+.loanForm-readout .loanForm-totalToRepay {
+    color: #ababab;
+}
+
+li.loanForm-additionBox, .loanForm-repayBox {
+    color: #ababab;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+    .loanForm-additionBox .loanForm-label, .loanForm-additionBox .v-number, .loanForm-repayBox .loanForm-label, .loanForm-repayBox .v-number {
+        font-size: 0.7em;
+    }
+
+    .loanForm-additionBox .dollarSign, .loanForm-repayBox .dollarSign {
+        top: 0px;
+    }
+
+.dollarSign, .decimal {
+    position: relative;
+    top: -0.6em;
+    left: -3px;
+    font-size: .5em;
+}
+
+.decimal {
+    left: auto;
+    right: -3px;
+}
+
+#form_plan #Principal {
+    display: none;
+}
+
+#form_plan .ui-slider-track {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.slider-bar-number {
+    float: right;
+    font-family: "museo-sans","museo-sans-1","museo-sans-2","Museo Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 0.8em;
+    padding: 2px 10px 2px 10px;
+    background: #FFF;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 50px;
+    text-align: center;
+}
+
+.slider-bar-label-box label {
+    margin: 4px 0 0 0;
+    display: inline;
+}
+
+.slider-bar-label-box {
+}
+
+.ui-header .ui-title, .ui-footer .ui-title {
+    margin: 0 6%;
+    white-space: normal;
+}
+
+.photo-placeholder {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    padding: 30px 0;
+    background: #FFF;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.uneditable-value {
+    margin: 0;
+    min-height: 2.2em;
+    text-align: left;
+    border: 0;
+    background: transparent none;
+    -webkit-appearance: none;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    padding: .4em;
+    line-height: 1.4em;
+    display: block;
+    width: 100%;
+    outline: 0;
+    font-weight: bold;
+}
+
+.ui-loader-verbose .ui-icon-loading {
+    filter: Alpha(Opacity=1);
+    opacity: 1;
+}
+
+.ui-loader .ui-icon-loading {
+    background-color: none;
+    width: 4em;
+    height: 4em;
+    padding: .0625em;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.ui-icon-loading {
+    background-size: 4em 4em;
+}
+
+.ui-loader-default {
+    background: none;
+    filter: Alpha(Opacity=0.6);
+    opacity: 0.6;
+    width: 4em;
+    height: 4em;
+    margin-left: -2em;
+    margin-top: -2em;
+}
+
+body.ui-mobile-viewport, div.ui-mobile-viewport {
+    overflow-x: visible;
+}
+
+#send_mobile_validate_code {    
+    margin: .4em;
+    margin-right: 0;
+    padding: .5em 1em;
+}
+
+/* merchant user order table */
+
+table#merchant-user-completed-app-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#merchant-user-completed-app-table .text-right {
+    text-align: right;
+}
+
+#merchant-user-completed-app-table th {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#merchant-user-completed-app-table tr {
+    border-bottom: solid 1px #ccc;
+}
+
+#merchant-user-completed-app-table td {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#merchant-user-completed-app-table td:hover {
+    cursor: pointer;
+}
+
+.merchant-user-table {
+    width: 100%;
+}
+
+    .merchant-user-table tr {
+        border-bottom: solid 1px #ccc;
+    }

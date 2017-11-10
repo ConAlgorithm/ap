@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="MessageNotification"> 
+    
+    <property name="jarname" value="MessageNotification.jar"/>
+    <property name="project.name" value="MessageNotification"/>
+    <property name="src.dir" value="${messagenotification.dir}/src"/>  
+    <property name="classes.dir" value="${messagenotification.dir}/bin"/>  
+  		
+	<!--第三方jar-->  
+    <path id="lib-classpath">  
+        <fileset dir="${temp.messagenotification.dir}">              
+            <include name="*.jar"/>			
+        </fileset>  
+    </path>
+	
+	<target name="copy">
+	    <copy todir="${temp.messagenotification.dir}" flatten="true">
+		   <fileset dir="${lib.dir}">
+				<include name="log4j/log4j-1.2.17.jar"/>
+				<include name="google/gson-2.2.4.jar"/>
+				<include name="jackson/jackson-all-1.9.0.jar"/>
+				<include name="dom4j/dom4j-1.6.1.jar"/>
+				<include name="spring/spring-beans-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-core-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-tx-4.0.5.RELEASE.jar"/>
+				<include name="jdbc/sqljdbc4.jar"/>
+				<include name="jdbc/bonecp-0.7.1.RELEASE.jar"/>
+				<include name="google/guava-14.0.jar"/>
+				<include name="slf4j-api-1.7.7.jar"/>
+				<include name="aliyun/ons/fastjson-1.1.41.jar"/>
+				<include name="aliyun/ons/netty-all-4.0.21.Final.jar"/>
+				<include name="aliyun/ons/ons-api-1.1.4.jar"/>
+				<include name="aliyun/ons/ons-client-1.1.4.jar"/>
+				<include name="aliyun/ons/rocketmq-client-3.2.1.jar"/>
+				<include name="aliyun/ons/rocketmq-common-3.2.1.jar"/>
+				<include name="aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+				<include name="apache/commons-io-2.4.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-continuation-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-http-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-io-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-server-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-util-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/servlet-api-3.1.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-webapp-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-servlet-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-security-9.2.11.v20150529.jar"/>
+		   	    <include name="jetty/9.2.11/jetty-xml-9.2.11.v20150529.jar"/>				
+				<include name="mengwang/activation.jar"/>
+				<include name="mengwang/axis.jar"/>
+				<include name="mengwang/commons-discovery-0.2.jar"/>
+				<include name="mengwang/javaee.jar"/>
+				<include name="mengwang/JNative.jar"/>
+				<include name="mengwang/json_simple.jar"/>
+				<include name="mengwang/mailapi_1_3_1.jar"/>
+				<include name="mengwang/mengwang-client.jar"/>
+				<include name="mengwang/wsdl4j-1.5.1.jar"/>
+				<include name="mengwang/xmlsec-1.4.2.jar"/>
+		   		<include name="jianzhou/jzsms-6.0.jar"/>
+		   	    <include name="joda/joda-time-2.5.jar"/>
+		   		<include name="aliyun/taobao-sdk-java-auto_1444896319945-20151015.jar"/>
+		   		<include name="aliyun/alimemcached/spymemcached-2.8.4.jar"/>
+		   	
+		   		<include name="com/superapp/wechat-base-api-1.0.0-SNAPSHOT.jar"/>
+	        </fileset>
+	        <fileset dir="${output.dir}">
+	        	<include name="MessageLauncher/MessageLauncher-sdk.jar"/>
+	        </fileset>  
+	    </copy>
+	    <echo level="info">拷贝MessageNotification依赖包完毕......</echo>
+	</target>
+	  
+    <!--编译 -->  
+    <target name="compile" depends="copy">  
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "" includeantruntime="true">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        </javac>  
+    	<echo>编译MessageNotification成功......</echo>
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar-project-with-lib" depends="compile" description="jar taget">
+    	<!--构造打包时Class-Path需要的路径, pathsep是分隔符 -->
+	    <pathconvert property="libs" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <flattenmapper />
+	               <!--  <globmapper from="*" to="lib/*" /> -->
+	            </chainedmapper>
+	        </mapper>
+	        <!--按照mapper定义的格式组合lib目录下面的所有jar文件，形成诸如lib/jar1.jar lib/jar2.jar的字符串-->
+	        <fileset dir="${temp.messagenotification.dir}">
+	            <include name="*.jar" />
+	        </fileset>
+	    </pathconvert>
+        <jar destfile="${output.dir}/${project.name}/${jarname}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>  
+                <attribute name="Class-Path" value="."/>  
+                <attribute name="Rsrc-Main-Class" value="catfish.notification.Driver"/>                
+                <attribute name="Rsrc-Class-Path" value="./ ${libs}"/>  
+            </manifest>
+            <zipfileset src="${lib.dir}/jar-in-jar-loader.zip"/> 
+            <zipfileset dir="${temp.messagenotification.dir}" includes="*.jar"/>  
+        </jar>
+    </target>
+	<target name="copy-config" depends="compile">
+		<copy todir="${output.dir}/${project.name}">
+			<fileset dir="${project.name}">
+				<include name ="resources.properties" />
+            </fileset>
+		</copy>
+	</target>
+
+    <target name="jar" depends="copy-config,jar-project-with-lib" description="jar target">
+    </target>
+	
+</project>  

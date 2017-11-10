@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-3.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/antlr-runtime-3.3.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/bcprov-jdk14-1.38.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/drools-all-5.5.0.ht.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/license-1.4.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-api-2.4.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-client-api-2.4.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/log4j/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//CFSERVER01/Share/Projects/jars/spring/spring-beans-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-tx-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/spring/spring-core-4.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/mysql-connector-java-5.1.9.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/dom4j/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-http-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-io-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-server-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/9.2.11/jetty-util-9.2.11.v20150529.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jetty/servlet-api-3.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/google/guava-14.0.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/apache/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/bonecp-0.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jdbc/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/joda/joda-time-2.5.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/fastjson-1.1.41.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/netty-all-4.0.21.Final.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-api-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/ons-client-1.1.4.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-client-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-common-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/aliyun/ons/rocketmq-remoting-3.2.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/csv/javacsv.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-engine-2.4.7.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/mongo/mongo-java-driver-2.12.4.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishBase"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServer"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FrameworkBase"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/toprules/toprules-common-2.4.7.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CatfishServices"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jaxrs-ri-2.17/api/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jersey/jersey-container-jetty-http-2.9.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jersey/jersey-jetty-1.0.1.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar"/>
+	<classpathentry kind="lib" path="//cfserver01/Share/Projects/jars/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="L:/Share/Projects/jars/thirdparty/ThirdPartyBusinessModel.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,64 @@
+#login {
+    position: absolute;
+    width:320px;
+    left:50%;
+    top:50%; 
+    margin-left:-160px;
+    margin-top:-100px; 
+}
+ 
+#moduleFrame {
+	position: absolute;
+    width:780px;
+    left:50%;
+    top:50%; 
+    margin-left:-390px;
+    margin-top:-100px; 
+}
+
+.moduleItem :hover{
+	font-size:120%;
+	background-color: yellow;
+	cursor: pointer;
+}
+
+#main {
+    position: absolute;
+    width:80%;
+    left:10%;
+} 
+
+.header{
+	background:url(../images/header-bg.png);
+	background-repeat: repeat; 
+    background-positon: 100%, 100%; 
+    width:100%;
+    height:50px;
+}
+
+.handler :hover{
+	background-color: yellow;
+	cursor: pointer;
+	font-size:110%;
+}
+
+.handler {
+	line-height:50px;
+	vertical-align:middle;
+	text-align:center;
+	word-break:break-all;
+}
+
+.modelLabel :hover{
+	background-color: yellow;
+	cursor: pointer;
+}
+
+.modelLabel.chosen{
+	background-color: yellow;
+}
+
+.panel-border{
+	border-width: 0px;
+	border-bottom: solid 1px #CCCCCC;
+}

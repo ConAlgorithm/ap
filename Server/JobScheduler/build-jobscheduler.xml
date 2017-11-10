@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="jar" name="JobScheduler"> 
+    
+    <property name="jarname" value="JobScheduler.jar"/>
+    
+    <property name="src.dir" value="${jobscheduler.dir}/src"/>  
+    <property name="classes.dir" value="${jobscheduler.dir}/bin"/>  
+  	<property name="resources.dir" value="${jobscheduler.dir}/resources"/>
+  		
+	<!--第三方jar-->  
+    <path id="lib-classpath">  
+        <fileset dir="${temp.jobscheduler.dir}">              
+            <include name="*.jar"/>			
+        </fileset>  
+    </path>
+	
+	<target name="copy">
+	    <copy todir="${temp.jobscheduler.dir}" flatten="true">
+		   <fileset dir="${lib.dir}">              
+				<include name="google/gson-2.2.4.jar"/>
+				<include name="log4j/log4j-1.2.17.jar"/>
+				<include name="jdbc/bonecp-0.7.1.RELEASE.jar"/>
+				<include name="google/guava-14.0.jar"/>
+				<include name="slf4j/slf4j-api-1.6.1.jar"/>
+		   	    <include name="slf4j/slf4j-log4j12-1.6.1.jar"/>
+				<include name="jdbc/sqljdbc4.jar"/>
+				<include name="spring/spring-beans-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-core-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-jdbc-4.0.5.RELEASE.jar"/>
+				<include name="spring/spring-tx-4.0.5.RELEASE.jar"/>
+				<include name="joda/joda-time-2.5.jar"/>
+	        </fileset>  
+	    </copy>
+	    <echo level="info">拷贝JobScheduler依赖包完毕......</echo>
+	</target>
+	  
+    <!--编译 -->  
+    <target name="compile" depends="copy">  
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" sourcepath = "" includeantruntime="true">  
+            <compilerarg line="-encoding UTF-8"/>  
+            <classpath refid="lib-classpath"/>  
+        </javac>  
+    	<echo>编译JobScheduler成功......</echo>
+    </target>
+  
+    <!--打包jar文件 -->  
+    <target name="jar" depends="compile" description="jar taget">
+    	<!--构造打包时Class-Path需要的路径, pathsep是分隔符 -->
+	    <pathconvert property="libs" pathsep=" ">
+	        <mapper>
+	            <chainedmapper>
+	                <flattenmapper />
+	               <!--  <globmapper from="*" to="lib/*" /> -->
+	            </chainedmapper>
+	        </mapper>
+	        <!--按照mapper定义的格式组合lib目录下面的所有jar文件，形成诸如lib/jar1.jar lib/jar2.jar的字符串-->
+	        <fileset dir="${temp.jobscheduler.dir}">
+	            <include name="*.jar" />
+	        </fileset>
+	    </pathconvert>
+        <jar destfile="${output.dir}/${jarname}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>  
+                <attribute name="Class-Path" value="."/>  
+                <attribute name="Rsrc-Main-Class" value="catfish.jobscheduler.Driver"/>                
+                <attribute name="Rsrc-Class-Path" value="./ ${libs}"/>  
+            </manifest>
+        	<fileset dir="${resources.dir}">
+        	   <!-- <include name="job.config"/> -->
+        	</fileset>
+            <zipfileset src="${lib.dir}/jar-in-jar-loader.zip"/> 
+            <zipfileset dir="${temp.jobscheduler.dir}" includes="*.jar"/>  
+        </jar>
+    </target>
+	
+</project>  
